@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PColombia</string>
+    <string name="email_personValidate">Correo</string>
+    <string name="password_personValidate">Contraseña</string>
+    <string name="register_personValidate">¿No tienes un usuario?</string>
+    <string name="validateButton_personValidate">Validar</string>
+    <string name="cancelButton_personValidate">Cancelar</string>
 </resources>
