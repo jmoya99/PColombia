@@ -5,4 +5,5 @@
     <string name="register_personValidate">¿No tienes un usuario?</string>
     <string name="validateButton_personValidate">Validar</string>
     <string name="cancelButton_personValidate">Cancelar</string>
+    <string name="title_manageUser">Gestionar Usuario</string>
 </resources>
