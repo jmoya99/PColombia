@@ -2,7 +2,9 @@ package com.example.pcolombia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,5 +15,10 @@ public class MainActivity extends AppCompatActivity {
         /*getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#EE7729")));
         getSupportActionBar().setTitle("PColombia");*/
         getSupportActionBar().hide();
+    }
+
+    public void pasarPestena(View view){
+        Intent activity = new Intent(this,GestionarUsuario.class);
+        startActivity(activity);
     }
 }
