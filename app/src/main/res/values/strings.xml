@@ -12,4 +12,5 @@
     <string name="rol_manageUser">Rol</string>
     <string name="editUserButton_manageUser">Editar Usuario</string>
     <string name="deleteUserButton_manageUser">Eliminar Usuario</string>
+    <string name="editUserAccept">Editar</string>
 </resources>
