@@ -4,5 +4,12 @@
     <string name="password_personValidate">Contraseña</string>
     <string name="register_personValidate">¿No tienes un usuario?</string>
     <string name="validateButton_personValidate">Validar</string>
-    <string name="cancelButton_personValidate">Cancelar</string>
+    <string name="cancelButton">Cancelar</string> <!--Este se usa en todas, asi que solo puse cancelButton para que se use en todas -->
+    <string name="title_manageUser">Gestionar Usuario</string>
+    <string name="name_manageUser">Nombre</string>
+    <string name="email_manageUser">Correo</string>
+    <string name="password_manageUser">Contraseña</string>
+    <string name="rol_manageUser">Rol</string>
+    <string name="editUserButton_manageUser">Editar Usuario</string>
+    <string name="deleteUserButton_manageUser">Eliminar Usuario</string>
 </resources>
