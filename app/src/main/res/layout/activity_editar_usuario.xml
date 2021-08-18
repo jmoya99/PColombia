@@ -74,13 +74,13 @@
         android:id="@+id/nameEditUser"
         android:layout_width="161dp"
         android:layout_height="33dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="60dp"
         android:text="@string/name_manageUser"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editUser" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/passwordUser"
@@ -94,25 +94,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
-    <TextView
-        android:id="@+id/editUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/editUserButton_manageUser"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="141dp"
         android:layout_height="109dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editUser"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_edituser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
