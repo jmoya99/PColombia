@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PColombia">
+        <activity android:name=".ManageProduct"></activity>
         <activity android:name=".EditProduct"></activity>
         <activity android:name=".RegisterProduct"></activity>
         <activity android:name=".MyProducts"></activity>
