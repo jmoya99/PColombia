@@ -120,7 +120,7 @@
             android:layout_marginBottom="70dp"
             android:onClick="createUser"
             android:text="Crear"
-            app:backgroundTint="#EE7729"
+            app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -134,7 +134,7 @@
             android:layout_marginRight="32dp"
             android:layout_marginBottom="70dp"
             android:text="Cancelar"
-            app:backgroundTint="#6C7473"
+            app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button"
             app:layout_constraintStart_toStartOf="parent" />

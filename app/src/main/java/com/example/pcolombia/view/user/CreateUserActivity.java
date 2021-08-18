@@ -3,6 +3,7 @@ package com.example.pcolombia.view.user;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -13,6 +14,8 @@ import android.widget.EditText;
 import com.example.pcolombia.R;
 import com.example.pcolombia.controller.user.CreateUserController;
 
+import static com.example.pcolombia.R.color.orange;
+
 public class CreateUserActivity extends AppCompatActivity {
 
     private EditText name;
@@ -20,11 +23,13 @@ public class CreateUserActivity extends AppCompatActivity {
     private EditText password;
     private CreateUserController createUserController;
     
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#EE7729")));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
+                Color.parseColor(getString(orange))));
         getSupportActionBar().setTitle("Crear Usuario");
 
         name = findViewById(R.id.nameET_createUser);

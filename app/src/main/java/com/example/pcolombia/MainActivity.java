@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pasarPestena(View view){
-        Intent activity = new Intent(this, MyProducts.class);
+        Intent activity = new Intent(this, ManageUser.class);
         startActivity(activity);
     }
 }
