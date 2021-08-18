@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PColombia">
         <activity android:name=".ManageProduct"></activity>
-        <activity android:name=".GestionarUsuario" />
+        <activity android:name=".EditProduct"></activity>
+        <activity android:name=".RegisterProduct"></activity>
+        <activity android:name=".MyProducts"></activity>
+        <activity android:name=".ManageUser" />
+        <activity android:name=".view.user.CreateUserActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

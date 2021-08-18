@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.pcolombia.view.user.CreateUserActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
         /*getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#EE7729")));
         getSupportActionBar().setTitle("PColombia");*/
         getSupportActionBar().hide();
+
     }
 
     public void pasarPestena(View view){
-        Intent activity = new Intent(this,GestionarUsuario.class);
+        Intent activity = new Intent(this, ManageUser.class);
         startActivity(activity);
     }
 }
