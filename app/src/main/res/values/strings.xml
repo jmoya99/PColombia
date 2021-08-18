@@ -12,4 +12,13 @@
     <string name="rol_manageUser">Rol</string>
     <string name="editUserButton_manageUser">Editar Usuario</string>
     <string name="deleteUserButton_manageUser">Eliminar Usuario</string>
+    <string name="title_myProducts">Mis Productos</string>
+    <string name="manageUser_myProducts">Gestionar Usuario</string>
+    <string name="registerProduct_myProducts">Registrar Producto</string>
+    <string name="leave_myProducts">Salir</string>
+    <string name="tradeMark_productFragment">Marca</string>
+    <string name="price_productFragment">Precio</string>
+    <string name="state_productFragment">Estado</string>
+    <string name="visibility_productFragment">Visibilidad</string>
+    <string name="seeMoreButton_productFragment">Ver más</string>
 </resources>
