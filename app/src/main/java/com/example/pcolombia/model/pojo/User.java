@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "user")
-public class user {
+public class User {
 
     @PrimaryKey
     @NonNull
@@ -20,7 +20,7 @@ public class user {
     @NonNull
     private String rol;
 
-    public user(String correo, String nombre, String contrasena, String rol) {
+    public User(String correo, String nombre, String contrasena, String rol) {
         this.correo = correo;
         this.nombre = nombre;
         this.contrasena = contrasena;

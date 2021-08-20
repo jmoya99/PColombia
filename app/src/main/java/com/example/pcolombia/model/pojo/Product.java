@@ -4,8 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "producto")
-public class product {
+@Entity(tableName = "product")
+public class Product {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -35,7 +35,7 @@ public class product {
     @NonNull
     private String visibilidad;
 
-    public product(String nombre, String marca, double precio, String estado, String tipo, String descripcion, int cantidad, String visibilidad) {
+    public Product(String nombre, String marca, double precio, String estado, String tipo, String descripcion, int cantidad, String visibilidad) {
         this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
