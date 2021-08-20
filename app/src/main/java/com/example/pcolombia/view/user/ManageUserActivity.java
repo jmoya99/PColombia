@@ -1,4 +1,4 @@
-package com.example.pcolombia;
+package com.example.pcolombia.view.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import static com.example.pcolombia.R.*;
 
-public class ManageUser extends AppCompatActivity {
+public class ManageUserActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     @Override

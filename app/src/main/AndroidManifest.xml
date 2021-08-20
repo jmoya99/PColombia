@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PColombia">
-        <activity android:name=".editar_usuario"></activity>
-        <activity android:name=".ManageProduct"></activity>
-        <activity android:name=".EditProduct"></activity>
-        <activity android:name=".RegisterProduct"></activity>
-        <activity android:name=".MyProducts"></activity>
-        <activity android:name=".ManageUser" />
+        <activity android:name=".view.user.EditUserActivity"></activity>
+        <activity android:name=".view.seller.ManageProductActivity"></activity>
+        <activity android:name=".view.seller.EditProductActivity"></activity>
+        <activity android:name=".view.seller.RegisterProductActivity"></activity>
+        <activity android:name=".view.seller.MyProductsActivity"></activity>
+        <activity android:name=".view.user.ManageUserActivity" />
         <activity android:name=".view.user.CreateUserActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
