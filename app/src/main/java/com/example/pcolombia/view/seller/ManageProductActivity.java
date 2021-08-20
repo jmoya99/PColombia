@@ -18,6 +18,6 @@ public class ManageProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manage_product);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle("Gestionar Producto");
+        getSupportActionBar().setTitle(getString(R.string.title_manageProduct));
     }
 }

@@ -30,7 +30,7 @@ public class CreateUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_user);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle("Crear Usuario");
+        getSupportActionBar().setTitle(getString(R.string.title_createUser));
 
         name = findViewById(R.id.nameET_createUser);
         email = findViewById(R.id.correoET_createUser);

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="Nombre"
+        android:text="@string/name_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/username_editProduct"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Marca"
+        android:text="@string/tradeMark_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/brand_editProduct"
         app:layout_constraintTop_toBottomOf="@+id/username_editProduct" />
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Precio"
+        android:text="@string/price_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/price_editProduct"
         app:layout_constraintTop_toBottomOf="@+id/brand_editProduct" />
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Tipo"
+        android:text="@string/type_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/spinner2"
         app:layout_constraintTop_toBottomOf="@+id/price_editProduct" />
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Cantidad"
+        android:text="@string/amount_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/quantity_editProduct"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Descripcion"
+        android:text="@string/description_registerProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/description_editProduct"
         app:layout_constraintTop_toBottomOf="@+id/quantity_editProduct" />
@@ -147,7 +147,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Cancelar"
+        android:text="@string/cancelButton"
         app:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,7 +163,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Registrar"
+        android:text="@string/registerButton_registerProduct"
         app:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"

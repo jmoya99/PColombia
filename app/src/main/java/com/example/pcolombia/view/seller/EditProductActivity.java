@@ -20,6 +20,6 @@ public class EditProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_product);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(orange))));
-        getSupportActionBar().setTitle("Editar Producto");
+        getSupportActionBar().setTitle(getString(R.string.title_editProduct));
     }
 }

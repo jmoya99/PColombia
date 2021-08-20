@@ -18,6 +18,6 @@ public class EditUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_user);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle("Editar Usuario");
+        getSupportActionBar().setTitle(getString(R.string.title_editUser));
     }
 }

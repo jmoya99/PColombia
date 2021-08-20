@@ -18,6 +18,6 @@ public class RegisterProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_product);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle("Registrar Producto");
+        getSupportActionBar().setTitle(getString(R.string.title_registerProduct));
     }
 }
