@@ -1,4 +1,4 @@
-package com.example.pcolombia;
+package com.example.pcolombia.view.seller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,10 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-public class MyProducts extends AppCompatActivity {
+import com.example.pcolombia.view.seller.fragment.ProductFragment;
+import com.example.pcolombia.R;
+
+public class MyProductsActivity extends AppCompatActivity {
 
     private String[] visibilidadDePrueba = {"Publica","Privada"};
     private String[] estadoDePrueba = {"Disponible","No Disponible"};

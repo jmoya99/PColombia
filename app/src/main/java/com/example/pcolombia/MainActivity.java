@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.pcolombia.view.user.CreateUserActivity;
+import com.example.pcolombia.view.seller.EditProductActivity;
+import com.example.pcolombia.view.user.ManageUserActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pasarPestena(View view){
-        Intent activity = new Intent(this, MyProducts.class);
+        Intent activity = new Intent(this, EditProductActivity.class);
         startActivity(activity);
     }
 }

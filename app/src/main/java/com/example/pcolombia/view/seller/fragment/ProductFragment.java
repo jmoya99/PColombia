@@ -1,4 +1,4 @@
-package com.example.pcolombia;
+package com.example.pcolombia.view.seller.fragment;
 
 import android.os.Bundle;
 
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.pcolombia.R;
 
 /**
  * A simple {@link Fragment} subclass.
