@@ -11,14 +11,12 @@
         android:layout_height="558dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/name_createUser"
@@ -27,13 +25,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:text="Nombre"
+            android:text="@string/name_createUser"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nameET_createUser"
+            android:id="@+id/nameTextView_createUser"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -54,13 +52,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:text="Correo"
+            android:text="@string/email_createUser"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameET_createUser" />
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView_createUser" />
 
         <EditText
-            android:id="@+id/correoET_createUser"
+            android:id="@+id/emailTextView_createUser"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -80,13 +78,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:text="Contraseña"
+            android:text="@string/password_createUser"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/correoET_createUser" />
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView_createUser" />
 
         <EditText
-            android:id="@+id/contraseñaET_createUser"
+            android:id="@+id/passwordTextView_createUser"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -106,26 +104,26 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:text="Rol"
+            android:text="@string/rol_createUser"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contraseñaET_createUser" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordTextView_createUser" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/cancelButton_editProduct"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_marginEnd="68dp"
             android:layout_marginRight="68dp"
             android:layout_marginBottom="70dp"
             android:onClick="createUser"
-            android:text="Crear"
-            app:backgroundTint="#EE7729"
+            android:text="@string/createButton_createUser"
+            app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/editButton_editProduct"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
@@ -133,22 +131,24 @@
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
             android:layout_marginBottom="70dp"
-            android:text="Cancelar"
-            app:backgroundTint="#6C7473"
+            android:text="@string/cancelButton"
+            app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/cancelButton_editProduct"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/rolSpinner_createUser"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Crear Usuario"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

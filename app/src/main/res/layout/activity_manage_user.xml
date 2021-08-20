@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GestionarUsuario">
+    tools:context=".view.user.ManageUserActivity">
 
     <Button
         android:id="@+id/cancelButton_manageUser"
@@ -18,7 +18,7 @@
         android:text="@string/cancelButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
-        app:backgroundTint="#6C7473"
+        app:backgroundTint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         android:text="@string/editUserButton_manageUser"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
-        app:backgroundTint="#EE7729"
+        app:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -56,7 +56,7 @@
         android:text="@string/deleteUserButton_manageUser"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
-        app:backgroundTint="#EE7729"
+        app:backgroundTint="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
