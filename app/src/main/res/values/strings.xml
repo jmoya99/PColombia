@@ -24,7 +24,7 @@
     <string name="deleteProductoButton_manager">Eliminar Producto</string>
     <string name="shareProductoButton_manager">Publicar Producto</string>
     <string name="editProductoButton_manager">Editar Producto</string> <!-- en vez de manager es manageProduct-->
-    <string name="commentProductoButton_manager">Comentar</string>
+    <string name="commentProductoButton_manager">Comentarios</string>
     <string name="title_myProducts">Mis Productos</string>
     <string name="manageUser_myProducts">Gestionar Usuario</string>
     <string name="registerProduct_myProducts">Registrar Producto</string>
