@@ -7,13 +7,26 @@
     tools:context=".view.seller.RegisterProductActivity"
     tools:visibility="visible">
 
+    <EditText
+        android:id="@+id/amountTextView_registerProduct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_amount_registerProduct" />
+
     <TextView
-        android:id="@+id/label_username_editProduct"
+        android:id="@+id/label_username_registerProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="@string/name_registerProduct"
-        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/nameTextView_registerProduct"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,22 +41,20 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_username_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_username_registerProduct" />
 
     <TextView
-        android:id="@+id/label_brand_editProduct"
+        android:id="@+id/label_trademark_registerProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/tradeMark_registerProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_editProduct"
+        app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_registerProduct"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/tradeMarkTextView_editProduct"
+        android:id="@+id/tradeMarkTextView_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -54,20 +65,19 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_brand_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_trademark_registerProduct" />
 
     <TextView
-        android:id="@+id/label_price_editProduct"
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/price_registerProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/priceTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/priceTextView_editProduct"
+        android:id="@+id/editTextTextPersonName4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,54 +88,50 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_price_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
-        android:id="@+id/label_type_editProduct"
+        android:id="@+id/label_type_registerProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/type_registerProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/typeSpinner_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/priceTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/typeSpinner_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
-    <TextView
-        android:id="@+id/label_quantity_editProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/amount_registerProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/amountTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/typeSpinner_editProduct" />
-
-    <EditText
-        android:id="@+id/amountTextView_editProduct"
+    <Spinner
+        android:id="@+id/typeSpinner_registerProduct"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:background="@android:drawable/btn_dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_quantity_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_type_registerProduct" />
 
     <TextView
-        android:id="@+id/label_description_editProduct"
+        android:id="@+id/label_amount_registerProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/amount_registerProduct"
+        app:layout_constraintStart_toStartOf="@+id/amountTextView_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner_registerProduct" />
+
+    <TextView
+        android:id="@+id/label_description_registerProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/description_registerProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/descriptionTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/amountTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/descriptionTextview_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/descriptionTextView_editProduct"
+        android:id="@+id/descriptionTextview_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -137,11 +143,26 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_description_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_description_registerProduct" />
 
     <Button
-        android:id="@+id/cancelButton_editProduct"
-        android:layout_width="0dp"
+        android:id="@+id/registerButton_registerProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/registerButton_registerProduct"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton_registerProduct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextview_registerProduct" />
+
+    <Button
+        android:id="@+id/cancelButton_registerProduct"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
@@ -151,37 +172,7 @@
         app:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editButton_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct"
-        app:rippleColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/editButton_editProduct"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/registerButton_registerProduct"
-        app:backgroundTint="@color/orange"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cancelButton_editProduct"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct" />
-
-    <Spinner
-        android:id="@+id/typeSpinner_editProduct"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@android:drawable/btn_dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_type_editProduct" />
-
+        app:layout_constraintStart_toEndOf="@+id/registerButton_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextview_registerProduct" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

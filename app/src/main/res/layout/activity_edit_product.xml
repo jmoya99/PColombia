@@ -14,11 +14,11 @@
         android:layout_marginTop="80dp"
         android:text="@string/name_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/nameTextView_registerProduct"
+        app:layout_constraintStart_toStartOf="@+id/nameTextView_editProduct"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nameTextView_registerProduct"
+        android:id="@+id/nameTextView_editProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -33,14 +33,14 @@
         app:layout_constraintTop_toBottomOf="@+id/label_username_editProduct" />
 
     <TextView
-        android:id="@+id/label_brand_editProduct"
+        android:id="@+id/label_trademark_editProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/tradeMark_editProduct"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView_registerProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView_editProduct" />
 
     <EditText
         android:id="@+id/tradeMarkTextView_editProduct"
@@ -54,7 +54,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_brand_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_trademark_editProduct" />
 
     <TextView
         android:id="@+id/label_price_editProduct"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/priceTextView_editProduct" />
 
     <TextView
-        android:id="@+id/label_quantity_editProduct"
+        android:id="@+id/label_amount_editProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -112,7 +112,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_quantity_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/label_amount_editProduct" />
 
     <TextView
         android:id="@+id/label_description_editProduct"
