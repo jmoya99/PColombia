@@ -1,4 +1,4 @@
-package com.example.pcolombia;
+package com.example.pcolombia.view.seller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,17 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import static com.example.pcolombia.R.*;
+import com.example.pcolombia.R;
 
-public class ManageUser extends AppCompatActivity {
+public class RegisterProductActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_manage_user);
+        setContentView(R.layout.activity_register_product);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
-                Color.parseColor(getString(color.orange))));
-        getSupportActionBar().setTitle(getString(string.title_manageUser));
+                Color.parseColor(getString(R.color.orange))));
+        getSupportActionBar().setTitle(getString(R.string.title_registerProduct));
     }
 }

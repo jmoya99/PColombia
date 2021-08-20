@@ -14,8 +14,6 @@ import android.widget.EditText;
 import com.example.pcolombia.R;
 import com.example.pcolombia.controller.user.CreateUserController;
 
-import static com.example.pcolombia.R.color.orange;
-
 public class CreateUserActivity extends AppCompatActivity {
 
     private EditText name;
@@ -29,12 +27,12 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
-                Color.parseColor(getString(orange))));
-        getSupportActionBar().setTitle("Crear Usuario");
+                Color.parseColor(getString(R.color.orange))));
+        getSupportActionBar().setTitle(getString(R.string.title_createUser));
 
-        name = findViewById(R.id.nameET_createUser);
-        email = findViewById(R.id.correoET_createUser);
-        password = findViewById(R.id.contraseñaET_createUser);
+        name = findViewById(R.id.nameTextView_createUser);
+        email = findViewById(R.id.emailTextView_createUser);
+        password = findViewById(R.id.passwordTextView_createUser);
 
         createUserController = new CreateUserController();
     }
