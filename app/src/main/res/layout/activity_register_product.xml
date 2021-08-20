@@ -68,16 +68,16 @@
         app:layout_constraintTop_toBottomOf="@+id/label_trademark_registerProduct" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/label_price_registerProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/price_registerProduct"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintStart_toStartOf="@+id/priceTextView_RegisterProduct"
         app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/priceTextView_RegisterProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -88,7 +88,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/label_price_registerProduct" />
 
     <TextView
         android:id="@+id/label_type_registerProduct"
@@ -97,7 +97,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/type_registerProduct"
         app:layout_constraintStart_toStartOf="@+id/typeSpinner_registerProduct"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView_RegisterProduct" />
 
     <Spinner
         android:id="@+id/typeSpinner_registerProduct"
