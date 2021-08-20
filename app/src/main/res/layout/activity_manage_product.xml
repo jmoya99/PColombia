@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="-71dp">
 
         <Button
-            android:id="@+id/editUserButton_manageUser8"
+            android:id="@+id/postProductButton_manageProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -25,12 +25,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
-            app:layout_constraintEnd_toStartOf="@+id/editUserButton_manageUser9"
-            app:layout_constraintStart_toEndOf="@+id/editUserButton_manageUser7"
+            app:layout_constraintEnd_toStartOf="@+id/editProductButton_manageProduct"
+            app:layout_constraintStart_toEndOf="@+id/deleteProductButton_manageProduct"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/editUserButton_manageUser9"
+            android:id="@+id/editProductButton_manageProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -41,11 +41,11 @@
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editUserButton_manageUser8"
+            app:layout_constraintStart_toEndOf="@+id/postProductButton_manageProduct"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/editUserButton_manageUser7"
+            android:id="@+id/deleteProductButton_manageProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -55,12 +55,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
-            app:layout_constraintEnd_toStartOf="@+id/editUserButton_manageUser8"
+            app:layout_constraintEnd_toStartOf="@+id/postProductButton_manageProduct"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/editUserButton_manageUser10"
+            android:id="@+id/cancelButton_manageProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
@@ -72,12 +72,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
-            app:layout_constraintEnd_toStartOf="@+id/editUserButton_manageUser11"
+            app:layout_constraintEnd_toStartOf="@+id/commentsButton_manageProduct"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editUserButton_manageUser8" />
+            app:layout_constraintTop_toBottomOf="@+id/postProductButton_manageProduct" />
 
         <Button
-            android:id="@+id/editUserButton_manageUser11"
+            android:id="@+id/commentsButton_manageProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -90,8 +90,8 @@
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editUserButton_manageUser10"
-            app:layout_constraintTop_toBottomOf="@+id/editUserButton_manageUser8" />
+            app:layout_constraintStart_toEndOf="@+id/cancelButton_manageProduct"
+            app:layout_constraintTop_toBottomOf="@+id/postProductButton_manageProduct" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -102,7 +102,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/nameTextView_manageUser4"
+                android:id="@+id/stateTextView_manageProduct"
                 android:layout_width="142dp"
                 android:layout_height="73dp"
                 android:layout_marginStart="10dp"
@@ -113,7 +113,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser8"
+                android:id="@+id/visibilityTextView_manageProduct"
                 android:layout_width="145dp"
                 android:layout_height="59dp"
                 android:layout_marginStart="10dp"
@@ -124,12 +124,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser7"
+                android:id="@+id/descriptionTextView_manageProduct"
                 android:layout_width="146dp"
-                android:layout_height="93dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Descripcion producto peye"
+                android:text="Descripcion producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -145,7 +145,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser8" />
+                app:layout_constraintTop_toBottomOf="@+id/visibilityTextView_manageProduct" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -171,7 +171,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser4" />
+                app:layout_constraintTop_toBottomOf="@+id/stateTextView_manageProduct" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -184,10 +184,10 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser7" />
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_manageProduct" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser10"
+                android:id="@+id/amountTextView_editText"
                 android:layout_width="145dp"
                 android:layout_height="59dp"
                 android:layout_marginStart="10dp"
@@ -209,7 +209,7 @@
 
 
             <TextView
-                android:id="@+id/nameTextView_manageUser13"
+                android:id="@+id/priceTextView_manageProduct"
                 android:layout_width="145dp"
                 android:layout_height="59dp"
                 android:layout_marginStart="10dp"
@@ -233,7 +233,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser3"
+                android:id="@+id/nameTextView_manageUser"
                 android:layout_width="145dp"
                 android:layout_height="69dp"
                 android:layout_marginStart="10dp"
@@ -254,10 +254,10 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser3" />
+                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser6"
+                android:id="@+id/tradeMarkTextView_manageUser"
                 android:layout_width="145dp"
                 android:layout_height="59dp"
                 android:layout_marginStart="10dp"
@@ -278,7 +278,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser6" />
+                app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_manageUser" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -291,10 +291,10 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser13" />
+                app:layout_constraintTop_toBottomOf="@+id/priceTextView_manageProduct" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser9"
+                android:id="@+id/typeTextView_manageProduct"
                 android:layout_width="145dp"
                 android:layout_height="59dp"
                 android:layout_marginStart="10dp"
