@@ -6,7 +6,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {},version = 1)
+import com.example.pcolombia.model.pojo.*;
+
+@Database(entities = {user.class,product.class},version = 1)
 public abstract class LocalStorage extends RoomDatabase {
 
     private static LocalStorage localStorage;
