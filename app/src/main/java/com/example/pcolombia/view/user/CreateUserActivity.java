@@ -29,7 +29,7 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
-                Color.parseColor(getString(orange))));
+                Color.parseColor(getString(R.color.orange))));
         getSupportActionBar().setTitle("Crear Usuario");
 
         name = findViewById(R.id.nameET_createUser);
