@@ -9,47 +9,46 @@ public class User {
 
     @PrimaryKey
     @NonNull
-    private String correo;
+    private String email;
 
     @NonNull
-    private String nombre;
+    private String name;
 
     @NonNull
-    private String contrasena;
+    private String password;
 
     @NonNull
     private String rol;
 
-    public User(String correo, String nombre, String contrasena, String rol) {
-        this.correo = correo;
-        this.nombre = nombre;
-        this.contrasena = contrasena;
+    public User(String email, String name, String password, String rol) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
         this.rol = rol;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRol() {

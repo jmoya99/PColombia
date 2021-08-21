@@ -12,105 +12,105 @@ public class Product {
     private int id;
 
     @NonNull
-    private String nombre;
+    private String name;
 
     @NonNull
-    private String marca;
+    private String trademark;
 
     @NonNull
-    private double precio;
+    private double price;
 
     @NonNull
-    private String estado;
+    private String state;
 
     @NonNull
-    private String tipo;
+    private String type;
 
     @NonNull
-    private String descripcion;
+    private String description;
 
     @NonNull
-    private int cantidad;
+    private int amount;
 
     @NonNull
-    private String visibilidad;
+    private String visibility;
 
-    public Product(String nombre, String marca, double precio, String estado, String tipo, String descripcion, int cantidad, String visibilidad) {
-        this.nombre = nombre;
-        this.marca = marca;
-        this.precio = precio;
-        this.estado = estado;
-        this.tipo = tipo;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.visibilidad = visibilidad;
+    public Product(String name, String trademark, double price, String state, String type, String description, int amount, String visibility) {
+        this.name = name;
+        this.trademark = trademark;
+        this.price = price;
+        this.state = state;
+        this.type = type;
+        this.description = description;
+        this.amount = amount;
+        this.visibility = visibility;
     }
 
-    public int getId() {
-        return id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getTrademark() {
+        return trademark;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setTrademark(String trademark) {
+        this.trademark = trademark;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getState() {
+        return state;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getType() {
+        return type;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
-    public String getVisibilidad() {
-        return visibilidad;
+    public String getVisibility() {
+        return visibility;
     }
 
-    public void setVisibilidad(String visibilidad) {
-        this.visibilidad = visibilidad;
+    public void setVisibility(String visibility) {
+        this.visibility = visibility;
     }
 }
