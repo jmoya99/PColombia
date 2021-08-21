@@ -1,6 +1,7 @@
 package com.example.pcolombia.model.pojo;
 
 import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -9,15 +10,19 @@ public class User {
 
     @PrimaryKey
     @NonNull
+    @ColumnInfo(name = "email")
     private String email;
 
     @NonNull
+    @ColumnInfo(name = "name")
     private String name;
 
     @NonNull
+    @ColumnInfo(name = "password")
     private String password;
 
     @NonNull
+    @ColumnInfo(name = "rol")
     private String rol;
 
     public User(String email, String name, String password, String rol) {
