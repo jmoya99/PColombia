@@ -1,17 +1,30 @@
 package com.example.pcolombia.view.seller;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.example.pcolombia.R;
+import com.example.pcolombia.controller.product.EditProductController;
 
 import static com.example.pcolombia.R.color.orange;
 
 public class EditProductActivity extends AppCompatActivity {
+
+    private EditText name;
+    private EditText tradeMark;
+    private EditText price;
+    private String type;
+    private EditText amount;
+    private EditText description;
+    private EditProductController controller;
 
     @SuppressLint("ResourceType")
     @Override
@@ -21,5 +34,38 @@ public class EditProductActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(orange))));
         getSupportActionBar().setTitle(getString(R.string.title_editProduct));
+        name = findViewById(R.id.nameTextView_registerProduct);
+        tradeMark = findViewById(R.id.tradeMarkTextView_registerProduct);
+        price = findViewById(R.id.priceTextView_registerProduct);
+        //type = findViewById(R.id.typeSpinner_editProduct).getTransitionName().toString();
+        amount = findViewById(R.id.amountTextView_registerProduct);
+        description = findViewById(R.id.descriptionTextView_registerProduct);
+        controller = new EditProductController();
     }
+
+    public void editProduct(View view){
+        String nameText = name.getText().toString();
+        String tradeMarkText = tradeMark.getText().toString();
+        String priceText = price.getText().toString();
+        String typeText = "";
+        String amountText = amount.getText().toString();
+        String descriptionText = description.getText().toString();
+        controller.editProduct(this, nameText,tradeMarkText,priceText,
+                                   typeText, amountText, descriptionText);
+    }
+
+    public void fieldMissing(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("por favor llenar todos los campos\n")
+                .setTitle("Algo fue Mal")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }

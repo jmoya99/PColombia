@@ -44,9 +44,9 @@ public class CreateUserActivity extends AppCompatActivity {
         createUserController.createUser(this, nameText, emailText, passwordText);
     }
 
-    public void nameIsMandatoryMandatory(){
+    public void missingField(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Nombre es Obligatorio")
+        builder.setMessage("por favor llenar todos los campos")
                 .setTitle("Algo fue Mal")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
@@ -58,9 +58,9 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void emailIsMandatoryMandatory(){
+    public void duplicatedEmail(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Correo es Obligatorio")
+        builder.setMessage("Este correo ya está registrado")
                 .setTitle("Algo fue Mal")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
@@ -72,17 +72,4 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void passwordIsMandatoryMandatory(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("COnstraseña es Obligatorio")
-                .setTitle("Algo fue Mal")
-                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
 }

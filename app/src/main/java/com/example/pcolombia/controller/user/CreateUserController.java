@@ -6,15 +6,15 @@ public class CreateUserController {
 
     public void createUser(CreateUserActivity activity, String name,String email, String password){
         if(name == null || name.compareTo("")==0){
-            activity.nameIsMandatoryMandatory();
+            activity.missingField();
             return;
         }
         if(email == null || email.compareTo("") == 0){
-            activity.emailIsMandatoryMandatory();
+            activity.missingField();
             return;
         }
         if(password == null || password.compareTo("")== 0){
-            activity.passwordIsMandatoryMandatory();
+            activity.missingField();
             return;
         }
         // SAVE it

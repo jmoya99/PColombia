@@ -39,11 +39,11 @@
         android:layout_marginTop="10dp"
         android:text="@string/tradeMark_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_editProduct"
+        app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_registerProduct"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/tradeMarkTextView_editProduct"
+        android:id="@+id/tradeMarkTextView_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,11 +63,11 @@
         android:layout_marginTop="10dp"
         android:text="@string/price_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/priceTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/priceTextView_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/priceTextView_editProduct"
+        android:id="@+id/priceTextView_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -87,8 +87,8 @@
         android:layout_marginTop="10dp"
         android:text="@string/type_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/typeSpinner_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/priceTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/typeSpinner_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView_registerProduct" />
 
     <TextView
         android:id="@+id/label_quantity_editProduct"
@@ -97,11 +97,11 @@
         android:layout_marginTop="10dp"
         android:text="@string/amount_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/amountTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/typeSpinner_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/amountTextView_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/typeSpinner_registerProduct" />
 
     <EditText
-        android:id="@+id/amountTextView_editProduct"
+        android:id="@+id/amountTextView_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -121,11 +121,11 @@
         android:layout_marginTop="10dp"
         android:text="@string/description_editProduct"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/descriptionTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/amountTextView_editProduct" />
+        app:layout_constraintStart_toStartOf="@+id/descriptionTextView_registerProduct"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView_registerProduct" />
 
     <EditText
-        android:id="@+id/descriptionTextView_editProduct"
+        android:id="@+id/descriptionTextView_registerProduct"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -152,7 +152,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editButton_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_registerProduct"
         app:rippleColor="#FFFFFF" />
 
     <Button
@@ -163,15 +163,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="editProduct"
         android:text="@string/editButton_editProduct"
         app:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cancelButton_editProduct"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_registerProduct" />
 
     <Spinner
-        android:id="@+id/typeSpinner_editProduct"
+        android:id="@+id/typeSpinner_registerProduct"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"

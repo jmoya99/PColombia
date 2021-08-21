@@ -81,7 +81,7 @@
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
         android:layout_marginBottom="40dp"
-        android:onClick="pasarPestena"
+        android:onClick="signIn"
         android:text="@string/validateButton_personValidate"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
