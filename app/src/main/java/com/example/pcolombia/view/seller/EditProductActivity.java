@@ -36,12 +36,12 @@ public class EditProductActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(orange))));
         getSupportActionBar().setTitle(getString(R.string.title_editProduct));
-        name = findViewById(R.id.nameTextView_registerProduct);
-        tradeMark = findViewById(R.id.tradeMarkTextView_registerProduct);
-        price = findViewById(R.id.priceTextView_registerProduct);
-        type = (Spinner) findViewById(R.id.typeSpinner_registerProduct);
-        amount = findViewById(R.id.amountTextView_registerProduct);
-        description = findViewById(R.id.descriptionTextView_registerProduct);
+        name = findViewById(R.id.nameTextView_editProduct);
+        tradeMark = findViewById(R.id.tradeMarkTextView_editProduct);
+        price = findViewById(R.id.priceTextView_editProduct);
+        type = (Spinner) findViewById(R.id.typeSpinner_editProduct);
+        amount = findViewById(R.id.amountTextView_editProduct);
+        description = findViewById(R.id.descriptionTextView_editProduct);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
