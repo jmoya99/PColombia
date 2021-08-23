@@ -4,7 +4,7 @@ import com.example.pcolombia.view.user.CreateUserActivity;
 
 public class CreateUserController {
 
-    public void createUser(CreateUserActivity activity, String name,String email, String password){
+    public void createUser(CreateUserActivity activity, String name,String email, String password, String rol){
         if(name == null || name.compareTo("")==0){
             activity.missingField();
             return;
@@ -14,6 +14,10 @@ public class CreateUserController {
             return;
         }
         if(password == null || password.compareTo("")== 0){
+            activity.missingField();
+            return;
+        }
+        if(rol == null || rol.compareTo("")== 0){
             activity.missingField();
             return;
         }

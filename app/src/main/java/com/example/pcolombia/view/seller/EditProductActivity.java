@@ -9,7 +9,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.pcolombia.R;
 import com.example.pcolombia.controller.product.EditProductController;
@@ -21,7 +23,7 @@ public class EditProductActivity extends AppCompatActivity {
     private EditText name;
     private EditText tradeMark;
     private EditText price;
-    private String type;
+    private Spinner type;
     private EditText amount;
     private EditText description;
     private EditProductController controller;
@@ -37,9 +39,16 @@ public class EditProductActivity extends AppCompatActivity {
         name = findViewById(R.id.nameTextView_registerProduct);
         tradeMark = findViewById(R.id.tradeMarkTextView_registerProduct);
         price = findViewById(R.id.priceTextView_registerProduct);
-        //type = findViewById(R.id.typeSpinner_editProduct).getTransitionName().toString();
+        type = (Spinner) findViewById(R.id.typeSpinner_registerProduct);
         amount = findViewById(R.id.amountTextView_registerProduct);
         description = findViewById(R.id.descriptionTextView_registerProduct);
+
+        //Codigo para poner los items en el spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.TypeProductItems, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        type.setAdapter(adapter);
+
         controller = new EditProductController();
     }
 
@@ -47,7 +56,7 @@ public class EditProductActivity extends AppCompatActivity {
         String nameText = name.getText().toString();
         String tradeMarkText = tradeMark.getText().toString();
         String priceText = price.getText().toString();
-        String typeText = "";
+        String typeText = type.getSelectedItem().toString();
         String amountText = amount.getText().toString();
         String descriptionText = description.getText().toString();
         controller.editProduct(this, nameText,tradeMarkText,priceText,

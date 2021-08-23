@@ -25,20 +25,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#EE7729")));
-        getSupportActionBar().setTitle("PColombia");*/
         getSupportActionBar().hide();
         email = findViewById(R.id.emailTextView_personValidate);
         password = findViewById(R.id.passwordTextView_personValidate);
         controller = new ValidateUserController();
-        Intent activity = new Intent(this, RegisterProductActivity.class);
+        Intent activity = new Intent(this, CreateUserActivity.class);
         startActivity(activity);
     }
 
-    public void signIn(View view){
+    public void validateUser(View view){
         String emailText = email.getText().toString();
         String passwordText = password.getText().toString();
-        controller.signIn(this, emailText, passwordText);
+        controller.validateUser(this, emailText, passwordText);
     }
 
     public void fieldMissing(){

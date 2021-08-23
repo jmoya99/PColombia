@@ -61,4 +61,23 @@
     <string name="title_registerProduct">Registrar Producto</string>
     <string name="title_createUser">Crear Usuario</string>
     <string name="title_editUser">Editar Usuario</string>
+    <string-array name="rolUserItems">
+        <item>Cliente</item>
+        <item>Vendedor</item>
+    </string-array>
+    <string-array name="TypeProductItems">
+        <item>PC</item>
+        <item>Portatil</item>
+        <item>CPU</item>
+        <item>RAM</item>
+        <item>Disco Duro</item>
+        <item>FAN</item>
+        <item>SSD</item>
+        <item>Placa madre</item>
+        <item>Fuente de poder</item>
+        <item>Mouse</item>
+        <item>Teclado</item>
+        <item>Monitor</item>
+        <item>Otro</item>
+    </string-array>
 </resources>

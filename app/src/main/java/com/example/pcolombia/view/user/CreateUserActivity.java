@@ -9,7 +9,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.pcolombia.R;
 import com.example.pcolombia.controller.user.CreateUserController;
@@ -19,6 +21,7 @@ public class CreateUserActivity extends AppCompatActivity {
     private EditText name;
     private EditText email;
     private EditText password;
+    private Spinner rol;
     private CreateUserController createUserController;
     
     @SuppressLint("ResourceType")
@@ -33,6 +36,13 @@ public class CreateUserActivity extends AppCompatActivity {
         name = findViewById(R.id.nameTextView_createUser);
         email = findViewById(R.id.emailTextView_createUser);
         password = findViewById(R.id.passwordTextView_createUser);
+        rol = (Spinner) findViewById(R.id.rolSpinner_createUser);
+
+        //Codigo para poner los items en el spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.rolUserItems, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        rol.setAdapter(adapter);
 
         createUserController = new CreateUserController();
     }
@@ -41,7 +51,8 @@ public class CreateUserActivity extends AppCompatActivity {
         String nameText = name.getText().toString();
         String emailText = email.getText().toString();
         String passwordText = password.getText().toString();
-        createUserController.createUser(this, nameText, emailText, passwordText);
+        String rolText = rol.getSelectedItem().toString();
+        createUserController.createUser(this, nameText, emailText, passwordText, rolText);
     }
 
     public void missingField(){
