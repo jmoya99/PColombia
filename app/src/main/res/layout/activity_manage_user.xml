@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.ManageUserActivity">
+    tools:context=".view.user.GestionarUsuarioActivity">
 
     <Button
         android:id="@+id/cancelButton_manageUser"
@@ -53,6 +53,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
+        android:onClick="eliminarUsuario"
         android:text="@string/deleteUserButton_manageUser"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"

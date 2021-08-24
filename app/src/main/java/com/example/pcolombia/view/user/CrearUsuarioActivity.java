@@ -9,17 +9,20 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.user.CreateUserController;
+import com.example.pcolombia.controller.usuario.CrearUsuarioController;
 
-public class CreateUserActivity extends AppCompatActivity {
+public class CrearUsuarioActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText email;
-    private EditText password;
-    private CreateUserController createUserController;
+    private EditText nombre;
+    private EditText correo;
+    private EditText contraseña;
+    private Spinner rol;
+    private CrearUsuarioController crearUsuarioController;
     
     @SuppressLint("ResourceType")
     @Override
@@ -30,23 +33,31 @@ public class CreateUserActivity extends AppCompatActivity {
                 Color.parseColor(getString(R.color.orange))));
         getSupportActionBar().setTitle(getString(R.string.title_createUser));
 
-        name = findViewById(R.id.nameTextView_createUser);
-        email = findViewById(R.id.emailTextView_createUser);
-        password = findViewById(R.id.passwordTextView_createUser);
+        nombre = findViewById(R.id.nameTextView_createUser);
+        correo = findViewById(R.id.emailTextView_createUser);
+        contraseña = findViewById(R.id.passwordTextView_createUser);
+        rol = (Spinner) findViewById(R.id.rolSpinner_createUser);
 
-        createUserController = new CreateUserController();
+        //Codigo para poner los items en el spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.rolUserItems, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        rol.setAdapter(adapter);
+
+        crearUsuarioController = new CrearUsuarioController();
     }
 
-    public void createUser(View view){
-        String nameText = name.getText().toString();
-        String emailText = email.getText().toString();
-        String passwordText = password.getText().toString();
-        createUserController.createUser(this, nameText, emailText, passwordText);
+    public void crearUsuario(View view){
+        String nombreText = nombre.getText().toString();
+        String correoText = correo.getText().toString();
+        String contraseñaText = contraseña.getText().toString();
+        String rolText = rol.getSelectedItem().toString();
+        crearUsuarioController.crearUsuario(this, nombreText, correoText, contraseñaText, rolText);
     }
 
-    public void nameIsMandatoryMandatory(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Nombre es Obligatorio")
+        builder.setMessage("por favor llenar todos los campos")
                 .setTitle("Algo fue Mal")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
@@ -58,9 +69,9 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void emailIsMandatoryMandatory(){
+    public void duplicatedEmail(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Correo es Obligatorio")
+        builder.setMessage("Este correo ya está registrado")
                 .setTitle("Algo fue Mal")
                 .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
@@ -72,17 +83,4 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void passwordIsMandatoryMandatory(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("COnstraseña es Obligatorio")
-                .setTitle("Algo fue Mal")
-                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
 }

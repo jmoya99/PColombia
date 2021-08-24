@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.CreateUserActivity">
+    tools:context=".view.user.CrearUsuarioActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="377dp"
@@ -111,43 +111,48 @@
 
         <Button
             android:id="@+id/cancelButton_editProduct"
-            android:layout_width="120dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginRight="68dp"
-            android:layout_marginBottom="70dp"
-            android:onClick="createUser"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="crearUsuario"
             android:text="@string/createButton_createUser"
             app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editButton_editProduct"
+            app:layout_constraintTop_toBottomOf="@+id/rolSpinner_createUser" />
 
         <Button
             android:id="@+id/editButton_editProduct"
-            android:layout_width="120dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:text="@string/cancelButton"
             app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/cancelButton_editProduct"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rolSpinner_createUser"
+            app:layout_constraintVertical_bias="0.504" />
 
         <Spinner
             android:id="@+id/rolSpinner_createUser"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:drawable/btn_dropdown"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"  />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

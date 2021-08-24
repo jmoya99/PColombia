@@ -67,6 +67,9 @@ public class Product {
         this.user_email = user_email;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public int getId() {
         return id;
     }
@@ -135,11 +138,11 @@ public class Product {
         this.visibility = visibility;
     }
 
-    public String getUserEmail() {
+    public String getUser_email() {
         return user_email;
     }
 
-    public void setUserEmail(String user_email) {
+    public void setUser_email(String user_email) {
         this.user_email = user_email;
     }
 }

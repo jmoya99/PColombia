@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.user;
+package com.example.pcolombia.view.seller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +9,15 @@ import android.os.Bundle;
 
 import com.example.pcolombia.R;
 
-public class EditUserActivity extends AppCompatActivity {
+public class GestionarProductoActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_user);
+        setContentView(R.layout.activity_manage_product);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_editUser));
+        getSupportActionBar().setTitle(getString(R.string.title_manageProduct));
     }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.EditUserActivity">
+    tools:context=".view.user.EditarUsuarioActivity">
 
     <Button
         android:id="@+id/editButton_editUser"
