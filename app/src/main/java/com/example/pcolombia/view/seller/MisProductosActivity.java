@@ -7,10 +7,10 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import com.example.pcolombia.view.seller.fragment.ProductFragment;
+import com.example.pcolombia.view.seller.fragment.ProductoFragment;
 import com.example.pcolombia.R;
 
-public class MyProductsActivity extends AppCompatActivity {
+public class MisProductosActivity extends AppCompatActivity {
 
     private String[] visibilidadDePrueba = {"Publica","Privada"};
     private String[] estadoDePrueba = {"Disponible","No Disponible"};
@@ -25,7 +25,7 @@ public class MyProductsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.title_myProducts));
         for (int i = 1;i < 20;i++){
             getSupportFragmentManager().beginTransaction().add(R.id.productListLinearLayout_myProducts,
-                    ProductFragment.newInstance("Producto "+i,"Marca "+i,
+                    ProductoFragment.newInstance("Producto "+i,"Marca "+i,
                             "$ "+(i*(100100+i)),estadoDePrueba[i%2],visibilidadDePrueba[i%2]))
                     .commit();
         }

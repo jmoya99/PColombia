@@ -14,17 +14,17 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.product.RegisterProductController;
+import com.example.pcolombia.controller.product.RegistrarProductoController;
 
-public class RegisterProductActivity extends AppCompatActivity {
+public class RegistrarProductoActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText tradeMark;
-    private EditText price;
-    private Spinner type;
-    private EditText amount;
-    private EditText description;
-    private RegisterProductController controller;
+    private EditText nombre;
+    private EditText marca;
+    private EditText precio;
+    private Spinner tipo;
+    private EditText cantidad;
+    private EditText descripcion;
+    private RegistrarProductoController controller;
 
     @SuppressLint("ResourceType")
     @Override
@@ -34,33 +34,33 @@ public class RegisterProductActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
         getSupportActionBar().setTitle(getString(R.string.title_registerProduct));
-        name = findViewById(R.id.nameTextView_registerProduct);
-        tradeMark = findViewById(R.id.tradeMarkTextView_registerProduct);
-        price = findViewById(R.id.priceTextView_registerProduct);
-        type = (Spinner) findViewById(R.id.typeSpinner_registerProduct);
-        amount = findViewById(R.id.amountTextView_registerProduct);
-        description = findViewById(R.id.descriptionTextView_registerProduct);
+        nombre = findViewById(R.id.nameTextView_registerProduct);
+        marca = findViewById(R.id.tradeMarkTextView_registerProduct);
+        precio = findViewById(R.id.priceTextView_registerProduct);
+        tipo = (Spinner) findViewById(R.id.typeSpinner_registerProduct);
+        cantidad = findViewById(R.id.amountTextView_registerProduct);
+        descripcion = findViewById(R.id.descriptionTextView_registerProduct);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.TypeProductItems, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        type.setAdapter(adapter);
-        controller = new RegisterProductController();
+        tipo.setAdapter(adapter);
+        controller = new RegistrarProductoController();
     }
 
-    public void registerProduct(View view){
-        String nameText = name.getText().toString();
-        String tradeMarkText = tradeMark.getText().toString();
-        String priceText = price.getText().toString();
-        String typeText = type.getSelectedItem().toString();
-        String amountText = amount.getText().toString();
-        String descriptionText = description.getText().toString();
-        controller.registerProduct(this, nameText,tradeMarkText,priceText,
-                typeText, amountText, descriptionText);
+    public void registrarProducto(View view){
+        String nombreText = nombre.getText().toString();
+        String marcaText = marca.getText().toString();
+        String precioText = precio.getText().toString();
+        String tipoText = tipo.getSelectedItem().toString();
+        String cantidadText = cantidad.getText().toString();
+        String descripcionText = descripcion.getText().toString();
+        controller.registrarProducto(this, nombreText,marcaText,precioText,
+                tipoText, cantidadText, descripcionText);
     }
 
-    public void fieldMissing(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos\n")
                 .setTitle("Algo fue Mal")

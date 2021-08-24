@@ -1,28 +1,28 @@
-package com.example.pcolombia.controller.user;
+package com.example.pcolombia.controller.usuario;
 
 import com.example.pcolombia.MainActivity;
 import com.example.pcolombia.model.LocalStorage;
 import com.example.pcolombia.model.dao.UserRoomDao;
 import com.example.pcolombia.model.pojo.User;
 
-public class ValidateUserController {
+public class ValidarUsuarioController {
 
     private UserRoomDao userRoomDao;
 
-    public void validateUser(MainActivity activity, String email, String password){
-        if(email == null || email.compareTo("")==0){
-            activity.fieldMissing();
+    public void validarUsuario(MainActivity activity, String correo, String contraseña){
+        if(correo == null || correo.compareTo("")==0){
+            activity.campoFaltante();
             return;
         }
-        if(password == null || password.compareTo("") == 0){
-            activity.fieldMissing();
+        if(contraseña == null || contraseña.compareTo("") == 0){
+            activity.campoFaltante();
             return;
         }
         this.userRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).userRoomDao();
-        User user = this.userRoomDao.signIn(email,password);
+        User user = this.userRoomDao.signIn(correo,contraseña);
         if(user == null){
-            activity.incorrectEmailOrPassword();
+            activity.correoOContraseñaIncorrectos();
             return;
         }
         if(user.getRol() == "Vendedor"){

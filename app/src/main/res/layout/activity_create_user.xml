@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.CreateUserActivity">
+    tools:context=".view.user.CrearUsuarioActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="377dp"
@@ -117,7 +117,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:onClick="createUser"
+            android:onClick="crearUsuario"
             android:text="@string/createButton_createUser"
             app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"

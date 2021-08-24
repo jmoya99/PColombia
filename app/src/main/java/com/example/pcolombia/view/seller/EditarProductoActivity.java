@@ -14,19 +14,19 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.product.EditProductController;
+import com.example.pcolombia.controller.product.EditarProductoController;
 
 import static com.example.pcolombia.R.color.orange;
 
-public class EditProductActivity extends AppCompatActivity {
+public class EditarProductoActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText tradeMark;
-    private EditText price;
-    private Spinner type;
-    private EditText amount;
-    private EditText description;
-    private EditProductController controller;
+    private EditText nombre;
+    private EditText marca;
+    private EditText precio;
+    private Spinner tipo;
+    private EditText cantidad;
+    private EditText descripcion;
+    private EditarProductoController controller;
 
     @SuppressLint("ResourceType")
     @Override
@@ -36,34 +36,34 @@ public class EditProductActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(orange))));
         getSupportActionBar().setTitle(getString(R.string.title_editProduct));
-        name = findViewById(R.id.nameTextView_editProduct);
-        tradeMark = findViewById(R.id.tradeMarkTextView_editProduct);
-        price = findViewById(R.id.priceTextView_editProduct);
-        type = (Spinner) findViewById(R.id.typeSpinner_editProduct);
-        amount = findViewById(R.id.amountTextView_editProduct);
-        description = findViewById(R.id.descriptionTextView_editProduct);
+        nombre = findViewById(R.id.nameTextView_editProduct);
+        marca = findViewById(R.id.tradeMarkTextView_editProduct);
+        precio = findViewById(R.id.priceTextView_editProduct);
+        tipo = (Spinner) findViewById(R.id.typeSpinner_editProduct);
+        cantidad = findViewById(R.id.amountTextView_editProduct);
+        descripcion = findViewById(R.id.descriptionTextView_editProduct);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.TypeProductItems, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        type.setAdapter(adapter);
+        tipo.setAdapter(adapter);
 
-        controller = new EditProductController();
+        controller = new EditarProductoController();
     }
 
-    public void editProduct(View view){
-        String nameText = name.getText().toString();
-        String tradeMarkText = tradeMark.getText().toString();
-        String priceText = price.getText().toString();
-        String typeText = type.getSelectedItem().toString();
-        String amountText = amount.getText().toString();
-        String descriptionText = description.getText().toString();
-        controller.editProduct(this, nameText,tradeMarkText,priceText,
-                                   typeText, amountText, descriptionText);
+    public void editarProducto(View view){
+        String nombreText = nombre.getText().toString();
+        String marcaText = marca.getText().toString();
+        String precioText = precio.getText().toString();
+        String tipoText = tipo.getSelectedItem().toString();
+        String cantidadText = cantidad.getText().toString();
+        String descripcionText = descripcion.getText().toString();
+        controller.editarProducto(this, nombreText,marcaText,precioText,
+                                   tipoText, cantidadText, descripcionText);
     }
 
-    public void fieldMissing(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos\n")
                 .setTitle("Algo fue Mal")

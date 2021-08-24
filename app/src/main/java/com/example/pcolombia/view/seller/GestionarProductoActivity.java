@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import com.example.pcolombia.R;
 
-public class ManageProductActivity extends AppCompatActivity {
+public class GestionarProductoActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     @Override

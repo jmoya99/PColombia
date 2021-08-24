@@ -10,13 +10,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.pcolombia.controller.user.ManageUserController;
+import com.example.pcolombia.controller.usuario.GestionarUsuarioController;
 
 import static com.example.pcolombia.R.*;
 
-public class ManageUserActivity extends AppCompatActivity {
+public class GestionarUsuarioActivity extends AppCompatActivity {
 
-    private ManageUserController controller;
+    private GestionarUsuarioController controller;
 
     @SuppressLint("ResourceType")
     @Override
@@ -26,10 +26,10 @@ public class ManageUserActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(color.orange))));
         getSupportActionBar().setTitle(getString(string.title_manageUser));
-        controller = new ManageUserController();
+        controller = new GestionarUsuarioController();
     }
 
-    public void removeUser(View view){
+    public void eliminarUsuario(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("¿Esta seguro de eliminar su usuario?")
                 .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
@@ -41,7 +41,7 @@ public class ManageUserActivity extends AppCompatActivity {
                 .setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        controller.removeUser();
+                        controller.eliminarUsuario();
                         dialogInterface.cancel();
                     }
                 });

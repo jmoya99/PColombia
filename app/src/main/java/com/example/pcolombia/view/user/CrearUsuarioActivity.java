@@ -14,15 +14,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.user.CreateUserController;
+import com.example.pcolombia.controller.usuario.CrearUsuarioController;
 
-public class CreateUserActivity extends AppCompatActivity {
+public class CrearUsuarioActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText email;
-    private EditText password;
+    private EditText nombre;
+    private EditText correo;
+    private EditText contraseña;
     private Spinner rol;
-    private CreateUserController createUserController;
+    private CrearUsuarioController crearUsuarioController;
     
     @SuppressLint("ResourceType")
     @Override
@@ -33,9 +33,9 @@ public class CreateUserActivity extends AppCompatActivity {
                 Color.parseColor(getString(R.color.orange))));
         getSupportActionBar().setTitle(getString(R.string.title_createUser));
 
-        name = findViewById(R.id.nameTextView_createUser);
-        email = findViewById(R.id.emailTextView_createUser);
-        password = findViewById(R.id.passwordTextView_createUser);
+        nombre = findViewById(R.id.nameTextView_createUser);
+        correo = findViewById(R.id.emailTextView_createUser);
+        contraseña = findViewById(R.id.passwordTextView_createUser);
         rol = (Spinner) findViewById(R.id.rolSpinner_createUser);
 
         //Codigo para poner los items en el spinner
@@ -44,18 +44,18 @@ public class CreateUserActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         rol.setAdapter(adapter);
 
-        createUserController = new CreateUserController();
+        crearUsuarioController = new CrearUsuarioController();
     }
 
-    public void createUser(View view){
-        String nameText = name.getText().toString();
-        String emailText = email.getText().toString();
-        String passwordText = password.getText().toString();
+    public void crearUsuario(View view){
+        String nombreText = nombre.getText().toString();
+        String correoText = correo.getText().toString();
+        String contraseñaText = contraseña.getText().toString();
         String rolText = rol.getSelectedItem().toString();
-        createUserController.createUser(this, nameText, emailText, passwordText, rolText);
+        crearUsuarioController.crearUsuario(this, nombreText, correoText, contraseñaText, rolText);
     }
 
-    public void missingField(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos")
                 .setTitle("Algo fue Mal")

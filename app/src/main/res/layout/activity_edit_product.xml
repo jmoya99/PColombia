@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.seller.EditProductActivity"
+    tools:context=".view.seller.EditarProductoActivity"
     tools:visibility="visible">>
 
     <TextView
@@ -163,7 +163,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:onClick="editProduct"
+        android:onClick="editarProducto"
         android:text="@string/editButton_editProduct"
         app:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
