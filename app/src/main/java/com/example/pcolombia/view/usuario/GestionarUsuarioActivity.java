@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.user;
+package com.example.pcolombia.view.usuario;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +22,10 @@ public class GestionarUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_manage_user);
+        setContentView(layout.activity_gestionar_usuario);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(color.orange))));
-        getSupportActionBar().setTitle(getString(string.title_manageUser));
+        getSupportActionBar().setTitle(getString(string.titulo_gestionarUsuario));
         controller = new GestionarUsuarioController();
     }
 

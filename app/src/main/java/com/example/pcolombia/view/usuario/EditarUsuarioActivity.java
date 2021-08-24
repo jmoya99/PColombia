@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.user;
+package com.example.pcolombia.view.usuario;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +15,9 @@ public class EditarUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_user);
+        setContentView(R.layout.activity_editar_usuario);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_editUser));
+        getSupportActionBar().setTitle(getString(R.string.titulo_editarUsuario));
     }
 }

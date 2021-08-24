@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.user;
+package com.example.pcolombia.view.usuario;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,19 +28,19 @@ public class CrearUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_user);
+        setContentView(R.layout.activity_crear_usuario);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_createUser));
+        getSupportActionBar().setTitle(getString(R.string.titulo_crearUsuario));
 
-        nombre = findViewById(R.id.nameTextView_createUser);
-        correo = findViewById(R.id.emailTextView_createUser);
-        contraseña = findViewById(R.id.passwordTextView_createUser);
-        rol = (Spinner) findViewById(R.id.rolSpinner_createUser);
+        nombre = findViewById(R.id.nombreTextView_crearUsuario);
+        correo = findViewById(R.id.correoTextView_crearUsuario);
+        contraseña = findViewById(R.id.contrasenaTextView_crearUsuario);
+        rol = (Spinner) findViewById(R.id.rolSpinner_crearUsuario);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.rolUserItems, android.R.layout.simple_spinner_item);
+                R.array.rolUsuarioItems, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         rol.setAdapter(adapter);
 

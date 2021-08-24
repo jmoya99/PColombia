@@ -1,71 +1,81 @@
 <resources>
     <string name="app_name">PColombia</string>
-    <string name="email_personValidate">Correo</string>
-    <string name="password_personValidate">Contraseña</string>
-    <string name="register_personValidate">¿No tienes un usuario?</string>
-    <string name="validateButton_personValidate">Validar</string>
-    <string name="cancelButton">Cancelar</string> <!--Este se usa en todas, asi que solo puse cancelButton para que se use en todas -->
-    <string name="title_manageUser">Gestionar Usuario</string>
-    <string name="name_manageUser">Nombre</string>
-    <string name="email_manageUser">Correo</string>
-    <string name="password_manageUser">Contraseña</string>
-    <string name="rol_manageUser">Rol</string>
-    <string name="editUserButton_manageUser">Editar Usuario</string>
-    <string name="deleteUserButton_manageUser">Eliminar Usuario</string>
-    <string name="name_manageProduct">Nombre</string>
-    <string name="state_manageProduct">Estado</string>
-    <string name="tradeMark_manageProduct">Marca</string>
-    <string name="visibility_manageProduct">Visibilidad</string>
-    <string name="cost_manageProduct">Precio</string>
-    <string name="description_manageProduct">Descripción</string>
-    <string name="type_manageProduct">Tipo</string>
-    <string name="amount_manageProduct">Cantidad</string>
-    <string name="deleteProductoButton_manageProduct">Eliminar Producto</string>
-    <string name="postProductoButton_manageProduct">Publicar Producto</string>
-    <string name="hideProductoButton_manageProduct">Ocultar Producto</string>
-    <string name="editProductoButton_manageProduct">Editar Producto</string>
-    <string name="commentProductoButton_manageProduct">Comentarios</string>
-    <string name="title_myProducts">Mis Productos</string>
-    <string name="manageUser_myProducts">Gestionar Usuario</string>
-    <string name="registerProduct_myProducts">Registrar Producto</string>
-    <string name="leave_myProducts">Salir</string>
-    <string name="tradeMark_productFragment">Marca</string>
-    <string name="price_productFragment">Precio</string>
-    <string name="state_productFragment">Estado</string>
-    <string name="visibility_productFragment">Visibilidad</string>
-    <string name="seeMoreButton_productFragment">Ver más</string>
-    <string name="name_createUser">Nombre</string>
-    <string name="email_createUser">Correo</string>
-    <string name="password_createUser">Contraseña</string>
-    <string name="rol_createUser">Rol</string>
-    <string name="createButton_createUser">Crear</string>
-    <string name="name_editProduct">Nombre</string>
-    <string name="tradeMark_editProduct">Marca</string>
-    <string name="price_editProduct">Precio</string>
-    <string name="type_editProduct">Tipo</string>
-    <string name="amount_editProduct">Cantidad</string>
-    <string name="description_editProduct">Descripción</string>
-    <string name="editButton_editProduct">Editar</string>
-    <string name="name_editUser">Nombre</string>
-    <string name="password_editUser">Contraseña</string>
-    <string name="editButton_editUser">Editar</string>
-    <string name="name_registerProduct">Nombre</string>
-    <string name="tradeMark_registerProduct">Marca</string>
-    <string name="price_registerProduct">Precio</string>
-    <string name="type_registerProduct">Tipo</string>
-    <string name="amount_registerProduct">Cantidad</string>
-    <string name="description_registerProduct">Descripción</string>
-    <string name="registerButton_registerProduct">Registrar</string>
-    <string name="title_editProduct">Editar Producto</string>
-    <string name="title_manageProduct">Gestionar Producto</string>
-    <string name="title_registerProduct">Registrar Producto</string>
-    <string name="title_createUser">Crear Usuario</string>
-    <string name="title_editUser">Editar Usuario</string>
-    <string-array name="rolUserItems">
+    <string name="correo_validarUsuario">Correo</string>
+    <string name="contrasena_validarUsuario">Contraseña</string>
+    <string name="registrar_validarUsuario">¿No tienes un usuario?</string>
+    <string name="validarButton_validarUsuario">Validar</string>
+
+    <string name="cancelarButton">Cancelar</string> <!--Este se usa en todas, asi que solo puse cancelarButton para que se use en todas -->
+
+    <string name="titulo_gestionarUsuario">Gestionar Usuario</string>
+    <string name="nombre_gestionarUsuario">Nombre</string>
+    <string name="correo_gestionarUsuario">Correo</string>
+    <string name="contrasena_gestionarUsuario">Contraseña</string>
+    <string name="rol_gestionarUsuario">Rol</string>
+    <string name="editarUsuarioButton_gestionarUsuario">Editar Usuario</string>
+    <string name="eliminarUsuarioButton_gestionarUsuario">Eliminar Usuario</string>
+
+    <string name="nombre_gestionarProducto">Nombre</string>
+    <string name="estado_gestionarProducto">Estado</string>
+    <string name="marca_gestionarProducto">Marca</string>
+    <string name="visibilidad_gestionarProducto">Visibilidad</string>
+    <string name="precio_gestionarProducto">Precio</string>
+    <string name="descripcion_gestionarProducto">Descripción</string>
+    <string name="tipo_gestionarProducto">Tipo</string>
+    <string name="cantidad_gestionarProducto">Cantidad</string>
+    <string name="eliminarProductoButton_gestionarProducto">Eliminar Producto</string>
+    <string name="publicarProductoButton_gestionarProducto">Publicar Producto</string>
+    <string name="ocultarProductoButton_gestionarProducto">Ocultar Producto</string>
+    <string name="editarProductoButton_gestionarProducto">Editar Producto</string>
+    <string name="comentariosProductoButton_gestionarProducto">Comentarios</string>
+
+    <string name="titulo_misProductos">Mis Productos</string>
+    <string name="gestionarUsuario_misProductos">Gestionar Usuario</string>
+    <string name="registrarProducto_misProductos">Registrar Producto</string>
+    <string name="salir_misProductos">Salir</string>
+
+    <string name="marca_productoFragment">Marca</string>
+    <string name="precio_productoFragment">Precio</string>
+    <string name="estado_productoFragment">Estado</string>
+    <string name="visibilidad_productoFragment">Visibilidad</string>
+    <string name="gestionarButton_productoFragment">Gestionar</string>
+
+    <string name="nombre_crearUsuario">Nombre</string>
+    <string name="correo_crearUsuario">Correo</string>
+    <string name="contrasena_crearUsuario">Contraseña</string>
+    <string name="rol_crearUsuario">Rol</string>
+    <string name="crearButton_crearUsuario">Crear</string>
+
+    <string name="nombre_editarProducto">Nombre</string>
+    <string name="marca_editarProducto">Marca</string>
+    <string name="precio_editarProducto">Precio</string>
+    <string name="tipo_editarProducto">Tipo</string>
+    <string name="cantidad_editarProducto">Cantidad</string>
+    <string name="descripcion_editarProducto">Descripción</string>
+    <string name="editarButton_editarProducto">Editar</string>
+
+    <string name="nombre_editarUsuario">Nombre</string>
+    <string name="contrasena_editarUsuario">Contraseña</string>
+    <string name="editarButton_editarUsuario">Editar</string>
+
+    <string name="nombre_registrarProducto">Nombre</string>
+    <string name="marca_registrarProducto">Marca</string>
+    <string name="precio_registrarProducto">Precio</string>
+    <string name="tipo_registrarProducto">Tipo</string>
+    <string name="cantidad_registrarProducto">Cantidad</string>
+    <string name="descripcion_registrarProducto">Descripción</string>
+    <string name="registrarButton_registrarProducto">Registrar</string>
+
+    <string name="titulo_editarProducto">Editar Producto</string>
+    <string name="titulo_gestionarProducto">Gestionar Producto</string>
+    <string name="titulo_registrarProducto">Registrar Producto</string>
+    <string name="titulo_crearUsuario">Crear Usuario</string>
+    <string name="titulo_editarUsuario">Editar Usuario</string>
+    <string-array name="rolUsuarioItems">
         <item>Cliente</item>
         <item>Vendedor</item>
     </string-array>
-    <string-array name="TypeProductItems">
+    <string-array name="tipoProductoItems">
         <item>PC</item>
         <item>Portatil</item>
         <item>CPU</item>

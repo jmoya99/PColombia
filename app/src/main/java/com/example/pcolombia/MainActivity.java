@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.pcolombia.controller.usuario.ValidarUsuarioController;
-import com.example.pcolombia.view.user.CrearUsuarioActivity;
+import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        correo = findViewById(R.id.emailTextView_personValidate);
-        contraseña = findViewById(R.id.passwordTextView_personValidate);
+        correo = findViewById(R.id.correoTextView_validarUsuario);
+        contraseña = findViewById(R.id.contrasenaTextView_validarUsuario);
         controller = new ValidarUsuarioController();
         Intent activity = new Intent(this, CrearUsuarioActivity.class);
         startActivity(activity);

@@ -1,6 +1,6 @@
-package com.example.pcolombia.controller.product;
+package com.example.pcolombia.controller.producto;
 
-import com.example.pcolombia.view.seller.EditarProductoActivity;
+import com.example.pcolombia.view.producto.EditarProductoActivity;
 
 public class EditarProductoController {
 

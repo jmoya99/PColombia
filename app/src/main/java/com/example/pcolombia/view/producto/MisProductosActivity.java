@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.seller;
+package com.example.pcolombia.view.producto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import com.example.pcolombia.view.seller.fragment.ProductoFragment;
+import com.example.pcolombia.view.producto.fragment.ProductoFragment;
 import com.example.pcolombia.R;
 
 public class MisProductosActivity extends AppCompatActivity {
@@ -19,15 +19,9 @@ public class MisProductosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_products);
+        setContentView(R.layout.activity_mis_productos);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_myProducts));
-        for (int i = 1;i < 20;i++){
-            getSupportFragmentManager().beginTransaction().add(R.id.productListLinearLayout_myProducts,
-                    ProductoFragment.newInstance("Producto "+i,"Marca "+i,
-                            "$ "+(i*(100100+i)),estadoDePrueba[i%2],visibilidadDePrueba[i%2]))
-                    .commit();
-        }
+        getSupportActionBar().setTitle(getString(R.string.titulo_misProductos));
     }
 }

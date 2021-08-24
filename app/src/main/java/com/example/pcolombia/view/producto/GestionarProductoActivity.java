@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.seller;
+package com.example.pcolombia.view.producto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,9 +15,9 @@ public class GestionarProductoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_product);
+        setContentView(R.layout.activity_gestionar_producto);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_manageProduct));
+        getSupportActionBar().setTitle(getString(R.string.titulo_gestionarProducto));
     }
 }

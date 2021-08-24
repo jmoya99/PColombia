@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PColombia">
-        <activity android:name=".view.user.EditarUsuarioActivity"></activity>
-        <activity android:name=".view.seller.GestionarProductoActivity"></activity>
-        <activity android:name=".view.seller.EditarProductoActivity"></activity>
-        <activity android:name=".view.seller.RegistrarProductoActivity"></activity>
-        <activity android:name=".view.seller.MisProductosActivity"></activity>
-        <activity android:name=".view.user.GestionarUsuarioActivity" />
-        <activity android:name=".view.user.CrearUsuarioActivity"></activity>
+        <activity android:name=".view.usuario.EditarUsuarioActivity"></activity>
+        <activity android:name=".view.producto.GestionarProductoActivity"></activity>
+        <activity android:name=".view.producto.EditarProductoActivity"></activity>
+        <activity android:name=".view.producto.RegistrarProductoActivity"></activity>
+        <activity android:name=".view.producto.MisProductosActivity"></activity>
+        <activity android:name=".view.usuario.GestionarUsuarioActivity" />
+        <activity android:name=".view.usuario.CrearUsuarioActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

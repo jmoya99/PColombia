@@ -1,6 +1,6 @@
 package com.example.pcolombia.controller.usuario;
 
-import com.example.pcolombia.view.user.CrearUsuarioActivity;
+import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
 
 public class CrearUsuarioController {
 

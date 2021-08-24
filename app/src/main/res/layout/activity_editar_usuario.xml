@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.EditarUsuarioActivity">
+    tools:context=".view.usuario.EditarUsuarioActivity">
 
     <Button
-        android:id="@+id/editButton_editUser"
+        android:id="@+id/editarButton_editarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:text="@string/editButton_editUser"
+        android:text="@string/editarButton_editarUsuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/orange"
@@ -22,17 +22,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView_editUser" />
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaTextView_editarUsuario" />
 
     <Button
-        android:id="@+id/cancelButton_editUser"
+        android:id="@+id/cancelarButton_editarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:text="@string/cancelButton"
+        android:text="@string/cancelarButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/gray"
@@ -40,11 +40,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editButton_editUser"
+        app:layout_constraintTop_toBottomOf="@+id/editarButton_editarUsuario"
         app:layout_constraintVertical_bias="0.145" />
 
     <EditText
-        android:id="@+id/nameTextView_editUser"
+        android:id="@+id/nombreTextView_editarUsuario"
         android:layout_width="321dp"
         android:layout_height="53dp"
         android:layout_marginTop="12dp"
@@ -54,10 +54,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameEditUser" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_editarUsuario" />
 
     <EditText
-        android:id="@+id/passwordTextView_editUser"
+        android:id="@+id/contrasenaTextView_editarUsuario"
         android:layout_width="323dp"
         android:layout_height="57dp"
         android:layout_marginTop="8dp"
@@ -66,14 +66,14 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordUser" />
+        app:layout_constraintTop_toBottomOf="@+id/contrasena_editarUsuario" />
 
     <TextView
-        android:id="@+id/nameEditUser"
+        android:id="@+id/nombre_editarUsuario"
         android:layout_width="161dp"
         android:layout_height="33dp"
         android:layout_marginTop="60dp"
-        android:text="@string/name_editUser"
+        android:text="@string/nombre_editarUsuario"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"
@@ -81,16 +81,16 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/passwordUser"
+        android:id="@+id/contrasena_editarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
         android:layout_marginTop="12dp"
-        android:text="@string/password_editUser"
+        android:text="@string/nombre_editarUsuario"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView_editUser" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView_editarUsuario" />
 
     <ImageView
         android:id="@+id/imageView3"

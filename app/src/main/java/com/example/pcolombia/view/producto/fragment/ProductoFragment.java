@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.seller.fragment;
+package com.example.pcolombia.view.producto.fragment;
 
 import android.os.Bundle;
 
@@ -54,12 +54,12 @@ public class ProductoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_product,container,false);
-        nombreTextView = rootView.findViewById(R.id.nameTextView_productFragment);
-        marcaTextView = rootView.findViewById(R.id.tradeMarkTextView_productFragment);
-        precioTextView = rootView.findViewById(R.id.priceTextView_productFragment);
-        estadoTextView = rootView.findViewById(R.id.stateTextView_productFragment);
-        visibilidadTextView = rootView.findViewById(R.id.visibilityTextView_productFragment);
+        rootView = inflater.inflate(R.layout.fragment_producto,container,false);
+        nombreTextView = rootView.findViewById(R.id.nombreTextView_producto);
+        marcaTextView = rootView.findViewById(R.id.marcaTextView_producto);
+        precioTextView = rootView.findViewById(R.id.precioTextView_producto);
+        estadoTextView = rootView.findViewById(R.id.estadoTextView_producto);
+        visibilidadTextView = rootView.findViewById(R.id.visibilidadTextView_producto);
         nombreTextView.setText(nombre);
         marcaTextView.setText(marca);
         precioTextView.setText(precio);

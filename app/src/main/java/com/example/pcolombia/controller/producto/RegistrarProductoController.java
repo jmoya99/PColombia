@@ -1,6 +1,6 @@
-package com.example.pcolombia.controller.product;
+package com.example.pcolombia.controller.producto;
 
-import com.example.pcolombia.view.seller.RegistrarProductoActivity;
+import com.example.pcolombia.view.producto.RegistrarProductoActivity;
 
 public class RegistrarProductoController {
 

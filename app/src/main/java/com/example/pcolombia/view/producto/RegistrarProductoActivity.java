@@ -1,4 +1,4 @@
-package com.example.pcolombia.view.seller;
+package com.example.pcolombia.view.producto;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +14,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.product.EditarProductoController;
+import com.example.pcolombia.controller.producto.RegistrarProductoController;
 
-import static com.example.pcolombia.R.color.orange;
-
-public class EditarProductoActivity extends AppCompatActivity {
+public class RegistrarProductoActivity extends AppCompatActivity {
 
     private EditText nombre;
     private EditText marca;
@@ -26,41 +24,40 @@ public class EditarProductoActivity extends AppCompatActivity {
     private Spinner tipo;
     private EditText cantidad;
     private EditText descripcion;
-    private EditarProductoController controller;
+    private RegistrarProductoController controller;
 
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_product);
+        setContentView(R.layout.activity_registrar_producto);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
-                Color.parseColor(getString(orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_editProduct));
-        nombre = findViewById(R.id.nameTextView_editProduct);
-        marca = findViewById(R.id.tradeMarkTextView_editProduct);
-        precio = findViewById(R.id.priceTextView_editProduct);
-        tipo = (Spinner) findViewById(R.id.typeSpinner_editProduct);
-        cantidad = findViewById(R.id.amountTextView_editProduct);
-        descripcion = findViewById(R.id.descriptionTextView_editProduct);
+                Color.parseColor(getString(R.color.orange))));
+        getSupportActionBar().setTitle(getString(R.string.titulo_registrarProducto));
+        nombre = findViewById(R.id.nombreTextView_registrarProducto);
+        marca = findViewById(R.id.marcaTextView_registrarProducto);
+        precio = findViewById(R.id.precioTextView_registrarProducto);
+        tipo = (Spinner) findViewById(R.id.tipoSpinner_registrarProducto);
+        cantidad = findViewById(R.id.cantidadTextView_registrarProducto);
+        descripcion = findViewById(R.id.descripcionTextView_registrarProducto);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.TypeProductItems, android.R.layout.simple_spinner_item);
+                R.array.tipoProductoItems, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipo.setAdapter(adapter);
-
-        controller = new EditarProductoController();
+        controller = new RegistrarProductoController();
     }
 
-    public void editarProducto(View view){
+    public void registrarProducto(View view){
         String nombreText = nombre.getText().toString();
         String marcaText = marca.getText().toString();
         String precioText = precio.getText().toString();
         String tipoText = tipo.getSelectedItem().toString();
         String cantidadText = cantidad.getText().toString();
         String descripcionText = descripcion.getText().toString();
-        controller.editarProducto(this, nombreText,marcaText,precioText,
-                                   tipoText, cantidadText, descripcionText);
+        controller.registrarProducto(this, nombreText,marcaText,precioText,
+                tipoText, cantidadText, descripcionText);
     }
 
     public void campoFaltante(){
@@ -76,5 +73,4 @@ public class EditarProductoActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
 }
