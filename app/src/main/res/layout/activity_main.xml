@@ -24,25 +24,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="70dp"
-        android:text="@string/email_personValidate"
+        android:text="@string/correo_validarUsuario"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <EditText
-        android:id="@+id/emailTextView_personValidate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -51,13 +36,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/password_personValidate"
+        android:text="@string/contrasena_validarUsuario"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView_personValidate" />
+        app:layout_constraintTop_toBottomOf="@+id/correoTextView_validarUsuario" />
 
     <EditText
-        android:id="@+id/passwordTextView_personValidate"
+        android:id="@+id/contrasenaTextView_validarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -72,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/validateButton_personValidate"
+        android:id="@+id/validarButton_validarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -81,8 +66,8 @@
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
         android:layout_marginBottom="40dp"
-        android:onClick="pasarPestena"
-        android:text="@string/validateButton_personValidate"
+        android:onClick="validarUsuario"
+        android:text="@string/validarButton_validarUsuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/orange"
@@ -90,10 +75,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerTextView_personValidate" />
+        app:layout_constraintTop_toBottomOf="@+id/registrarTextView_validarUsuario" />
 
     <Button
-        android:id="@+id/CancelButton_personValidate"
+        android:id="@+id/cancelarButton_validarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -101,26 +86,43 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
-        android:text="@string/cancelButton"
+        android:onClick="cancelar"
+        android:text="@string/cancelarButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/validateButton_personValidate" />
+        app:layout_constraintTop_toBottomOf="@+id/validarButton_validarUsuario" />
 
     <TextView
-        android:id="@+id/registerTextView_personValidate"
+        android:id="@+id/registrarTextView_validarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:text="@string/register_personValidate"
+        android:onClick="irACrearUsuario"
+        android:text="@string/registrar_validarUsuario"
         android:textColor="#EE7729"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView_personValidate" />
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaTextView_validarUsuario" />
+
+    <EditText
+        android:id="@+id/correoTextView_validarUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.seller.ManageProductActivity">
+    tools:context=".view.producto.GestionarProductoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="-71dp">
 
         <Button
-            android:id="@+id/postProductButton_manageProduct"
+            android:id="@+id/publicarOcultarButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -21,46 +21,49 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:text="@string/postProductoButton_manageProduct"
+            android:onClick="publicarOcultarProducto"
+            android:text="@string/publicarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
-            app:layout_constraintEnd_toStartOf="@+id/editProductButton_manageProduct"
-            app:layout_constraintStart_toEndOf="@+id/deleteProductButton_manageProduct"
+            app:layout_constraintEnd_toStartOf="@+id/editarButton_gestionarProducto"
+            app:layout_constraintStart_toEndOf="@+id/eliminarButton_gestionarProducto"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/editProductButton_manageProduct"
+            android:id="@+id/editarButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:text="@string/editProductoButton_manageProduct"
+            android:onClick="irAEditarProducto"
+            android:text="@string/editarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/postProductButton_manageProduct"
+            app:layout_constraintStart_toEndOf="@+id/publicarOcultarButton_gestionarProducto"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/deleteProductButton_manageProduct"
+            android:id="@+id/eliminarButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="@string/deleteProductoButton_manageProduct"
+            android:onClick="eliminarProducto"
+            android:text="@string/eliminarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
-            app:layout_constraintEnd_toStartOf="@+id/postProductButton_manageProduct"
+            app:layout_constraintEnd_toStartOf="@+id/publicarOcultarButton_gestionarProducto"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
-            android:id="@+id/cancelButton_manageProduct"
+            android:id="@+id/cancelarButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
@@ -68,16 +71,17 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:text="@string/cancelButton"
+            android:onClick="irAMisProductos"
+            android:text="@string/cancelarButton"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
-            app:layout_constraintEnd_toStartOf="@+id/commentsButton_manageProduct"
+            app:layout_constraintEnd_toStartOf="@+id/comentariosButton_gestionarProducto"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/postProductButton_manageProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/publicarOcultarButton_gestionarProducto" />
 
         <Button
-            android:id="@+id/commentsButton_manageProduct"
+            android:id="@+id/comentariosButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -85,13 +89,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="70dp"
             android:layout_marginRight="70dp"
-            android:text="@string/commentProductoButton_manageProduct"
+            android:enabled="false"
+            android:text="@string/comentariosProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cancelButton_manageProduct"
-            app:layout_constraintTop_toBottomOf="@+id/postProductButton_manageProduct" />
+            app:layout_constraintStart_toEndOf="@+id/cancelarButton_gestionarProducto"
+            app:layout_constraintTop_toBottomOf="@+id/publicarOcultarButton_gestionarProducto" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -102,34 +107,31 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/stateTextView_manageProduct"
-                android:layout_width="142dp"
-                android:layout_height="73dp"
+                android:id="@+id/estadoTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Estado de producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
-                android:id="@+id/visibilityTextView_manageProduct"
-                android:layout_width="145dp"
-                android:layout_height="59dp"
+                android:id="@+id/visibilidadTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Visibilidad Producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <TextView
-                android:id="@+id/descriptionTextView_manageProduct"
-                android:layout_width="146dp"
+                android:id="@+id/descripcionTextView_gestionarProducto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Descripcion producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -141,11 +143,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/description_manageProduct"
+                android:text="@string/descripcion_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/visibilityTextView_manageProduct" />
+                app:layout_constraintTop_toBottomOf="@+id/visibilidadTextView_gestionarProducto" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -154,7 +156,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/state_manageProduct"
+                android:text="@string/estado_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,11 +169,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/visibility_manageProduct"
+                android:text="@string/visibilidad_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stateTextView_manageProduct" />
+                app:layout_constraintTop_toBottomOf="@+id/estadoTextView_gestionarProducto" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -180,19 +182,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/amount_manageProduct"
+                android:text="@string/cantidad_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_manageProduct" />
+                app:layout_constraintTop_toBottomOf="@+id/descripcionTextView_gestionarProducto" />
 
             <TextView
-                android:id="@+id/amountTextView_editText"
-                android:layout_width="145dp"
-                android:layout_height="59dp"
+                android:id="@+id/cantidadTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Cantidad Producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -209,12 +210,11 @@
 
 
             <TextView
-                android:id="@+id/priceTextView_manageProduct"
-                android:layout_width="145dp"
-                android:layout_height="59dp"
+                android:id="@+id/precioTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Precio Producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -226,19 +226,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/name_manageProduct"
+                android:text="@string/nombre_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/nameTextView_manageUser"
-                android:layout_width="145dp"
-                android:layout_height="69dp"
+                android:id="@+id/nombreTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="nombre de producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -250,19 +249,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/tradeMark_manageProduct"
+                android:text="@string/marca_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser" />
+                app:layout_constraintTop_toBottomOf="@+id/nombreTextView_gestionarProducto" />
 
             <TextView
-                android:id="@+id/tradeMarkTextView_manageUser"
-                android:layout_width="145dp"
-                android:layout_height="59dp"
+                android:id="@+id/marcaTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Marca producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -274,11 +272,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/cost_manageProduct"
+                android:text="@string/precio_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_manageUser" />
+                app:layout_constraintTop_toBottomOf="@+id/marcaTextView_gestionarProducto" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -287,19 +285,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:text="@string/type_manageProduct"
+                android:text="@string/tipo_gestionarProducto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/priceTextView_manageProduct" />
+                app:layout_constraintTop_toBottomOf="@+id/precioTextView_gestionarProducto" />
 
             <TextView
-                android:id="@+id/typeTextView_manageProduct"
-                android:layout_width="145dp"
-                android:layout_height="59dp"
+                android:id="@+id/tipoTextView_gestionarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Tipo Producto"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
