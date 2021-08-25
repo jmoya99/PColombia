@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.seller.MyProductsActivity">
+    tools:context=".view.producto.MisProductosActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -20,40 +20,43 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/manageUserButton_myProducts"
+            android:id="@+id/gestionarUsuarioButton_misProductos"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="@string/manageUser_myProducts"
+            android:onClick="irAGestionarUsuario"
+            android:text="@string/gestionarUsuario_misProductos"
             app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/registerProductButton_myProducts"
+            app:layout_constraintEnd_toStartOf="@+id/registrarProductoButton_misProductos"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/registerProductButton_myProducts"
+            android:id="@+id/registrarProductoButton_misProductos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:text="@string/registerProduct_myProducts"
+            android:onClick="irARegistrarProducto"
+            android:text="@string/registrarProducto_misProductos"
             app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/leaveButton_myProducts"
-            app:layout_constraintStart_toEndOf="@+id/manageUserButton_myProducts"
+            app:layout_constraintEnd_toStartOf="@+id/salirButton_misProductos"
+            app:layout_constraintStart_toEndOf="@+id/gestionarUsuarioButton_misProductos"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/leaveButton_myProducts"
+            android:id="@+id/salirButton_misProductos"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="@string/leave_myProducts"
+            android:onClick="irAValidarUsuario"
+            android:text="@string/salir_misProductos"
             app:backgroundTint="@color/gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/registerProductButton_myProducts"
+            app:layout_constraintStart_toEndOf="@+id/registrarProductoButton_misProductos"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <LinearLayout
-            android:id="@+id/productListLinearLayout_myProducts"
+            android:id="@+id/listaProductosLinearLayout_misProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />

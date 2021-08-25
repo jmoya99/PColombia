@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.user.ManageUserActivity">
+    tools:context=".view.usuario.GestionarUsuarioActivity">
 
     <Button
-        android:id="@+id/cancelButton_manageUser"
+        android:id="@+id/cancelarButton_gestionarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -15,17 +15,18 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:text="@string/cancelButton"
+        android:onClick="irAMisProductos"
+        android:text="@string/cancelarButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deleteButton_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/eliminarButton_gestionarUsuario" />
 
     <Button
-        android:id="@+id/editUserButton_manageUser"
+        android:id="@+id/editarButton_gestionarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -34,7 +35,8 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:layout_marginBottom="200dp"
-        android:text="@string/editUserButton_manageUser"
+        android:onClick="irAEditarUsuario"
+        android:text="@string/editarUsuarioButton_gestionarUsuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/orange"
@@ -42,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rolTextView_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/rolTextView_gestionarUsuario" />
 
     <Button
-        android:id="@+id/deleteButton_manageUser"
+        android:id="@+id/eliminarButton_gestionarUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -53,15 +55,15 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:onClick="removeUser"
-        android:text="@string/deleteUserButton_manageUser"
+        android:onClick="eliminarUsuario"
+        android:text="@string/eliminarUsuarioButton_gestionarUsuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         app:backgroundTint="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editUserButton_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/editarButton_gestionarUsuario" />
 
     <TextView
         android:id="@+id/textView10"
@@ -70,20 +72,19 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/rol_manageUser"
+        android:text="@string/rol_gestionarUsuario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/contrasenaTextView_gestionarUsuario" />
 
     <TextView
-        android:id="@+id/rolTextView_manageUser"
+        android:id="@+id/rolTextView_gestionarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:text="pasivo"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -95,20 +96,19 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/password_manageUser"
+        android:text="@string/contrasena_gestionarUsuario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/correoTextView_gestionarUsuario" />
 
     <TextView
-        android:id="@+id/passwordTextView_manageUser"
+        android:id="@+id/contrasenaTextView_gestionarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:text="***********************"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -120,7 +120,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:text="@string/name_manageUser"
+        android:text="@string/nombre_gestionarUsuario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,32 +133,30 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/email_manageUser"
+        android:text="@string/correo_gestionarUsuario"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView_manageUser" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView_gestionarUsuario" />
 
     <TextView
-        android:id="@+id/nameTextView_manageUser"
+        android:id="@+id/nombreTextView_gestionarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:text="nombre falso de prueba"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/emailTextView_manageUser"
+        android:id="@+id/correoTextView_gestionarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:text="correoFalse@lafalsedad.fake"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />

@@ -1,10 +1,11 @@
-package com.example.pcolombia.view.user;
+package com.example.pcolombia.view.usuario;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,49 +14,50 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.pcolombia.MainActivity;
 import com.example.pcolombia.R;
-import com.example.pcolombia.controller.user.CreateUserController;
+import com.example.pcolombia.controller.usuario.CrearUsuarioController;
 
-public class CreateUserActivity extends AppCompatActivity {
+public class CrearUsuarioActivity extends AppCompatActivity {
 
-    private EditText name;
-    private EditText email;
-    private EditText password;
+    private EditText nombre;
+    private EditText correo;
+    private EditText contraseña;
     private Spinner rol;
-    private CreateUserController createUserController;
+    private CrearUsuarioController crearUsuarioController;
     
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_user);
+        setContentView(R.layout.activity_crear_usuario);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
-        getSupportActionBar().setTitle(getString(R.string.title_createUser));
+        getSupportActionBar().setTitle(getString(R.string.titulo_crearUsuario));
 
-        name = findViewById(R.id.nameTextView_createUser);
-        email = findViewById(R.id.emailTextView_createUser);
-        password = findViewById(R.id.passwordTextView_createUser);
-        rol = (Spinner) findViewById(R.id.rolSpinner_createUser);
+        nombre = findViewById(R.id.nombreTextView_crearUsuario);
+        correo = findViewById(R.id.correoTextView_crearUsuario);
+        contraseña = findViewById(R.id.contrasenaTextView_crearUsuario);
+        rol = (Spinner) findViewById(R.id.rolSpinner_crearUsuario);
 
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.rolUserItems, android.R.layout.simple_spinner_item);
+                R.array.rolUsuarioItems, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         rol.setAdapter(adapter);
 
-        createUserController = new CreateUserController();
+        crearUsuarioController = new CrearUsuarioController();
     }
 
-    public void createUser(View view){
-        String nameText = name.getText().toString();
-        String emailText = email.getText().toString();
-        String passwordText = password.getText().toString();
+    public void crearUsuario(View view){
+        String nombreText = nombre.getText().toString();
+        String correoText = correo.getText().toString();
+        String contraseñaText = contraseña.getText().toString();
         String rolText = rol.getSelectedItem().toString();
-        createUserController.createUser(this, nameText, emailText, passwordText, rolText);
+        crearUsuarioController.crearUsuario(this, nombreText, correoText, contraseñaText, rolText);
     }
 
-    public void missingField(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos")
                 .setTitle("Algo fue Mal")
@@ -69,7 +71,7 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void duplicatedEmail(){
+    public void correoDuplicado(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Este correo ya está registrado")
                 .setTitle("Algo fue Mal")
@@ -83,4 +85,9 @@ public class CreateUserActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    public void irAValidarUsuario(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".view.seller.fragment.ProductFragment">
+    tools:context=".view.producto.fragment.ProductoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/nameTextView_productFragment"
+            android:id="@+id/nombreTextView_producto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Nombre falso"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="30sp"
@@ -33,13 +32,13 @@
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameTextView_productFragment">
+            app:layout_constraintTop_toBottomOf="@+id/nombreTextView_producto">
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tradeMark_productFragment"
+                android:text="@string/marca_productoFragment"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/price_productFragment"
+                android:text="@string/precio_productoFragment"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/state_productFragment"
+                android:text="@string/estado_productoFragment"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/visibility_productFragment"
+                android:text="@string/visibilidad_productoFragment"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -90,10 +89,10 @@
             android:layout_marginRight="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/nameTextView_productFragment">
+            app:layout_constraintTop_toBottomOf="@+id/nombreTextView_producto">
 
             <TextView
-                android:id="@+id/tradeMarkTextView_productFragment"
+                android:id="@+id/marcaTextView_producto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
@@ -101,35 +100,35 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/priceTextView_productFragment"
+                android:id="@+id/precioTextView_producto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_productFragment" />
+                app:layout_constraintTop_toBottomOf="@+id/marcaTextView_producto" />
 
             <TextView
-                android:id="@+id/stateTextView_productFragment"
+                android:id="@+id/estadoTextView_producto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/priceTextView_productFragment" />
+                app:layout_constraintTop_toBottomOf="@+id/precioTextView_producto" />
 
             <TextView
-                android:id="@+id/visibilityTextView_productFragment"
+                android:id="@+id/visibilidadTextView_producto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stateTextView_productFragment" />
+                app:layout_constraintTop_toBottomOf="@+id/estadoTextView_producto" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/seeMoreButton_productFragment"
+            android:id="@+id/gestionarButton_producto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
@@ -138,7 +137,8 @@
             android:layout_marginEnd="100dp"
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/seeMoreButton_productFragment"
+            android:onClick="gestionarProducto"
+            android:text="@string/gestionarButton_productoFragment"
             android:textSize="18sp"
             app:backgroundTint="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"

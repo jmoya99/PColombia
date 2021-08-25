@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.seller.EditProductActivity"
+    tools:context=".view.producto.EditarProductoActivity"
     tools:visibility="visible">>
 
     <TextView
-        android:id="@+id/label_username_editProduct"
+        android:id="@+id/nombre_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="@string/name_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/nameTextView_editProduct"
+        android:text="@string/nombre_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/nombreTextView_editarProducto"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nameTextView_editProduct"
+        android:id="@+id/nombreTextView_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,20 +29,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_username_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_editarProducto" />
 
     <TextView
-        android:id="@+id/label_brand_editProduct"
+        android:id="@+id/marca_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/tradeMark_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/tradeMarkTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView_editProduct" />
+        android:text="@string/marca_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/marcaTextView_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView_editarProducto" />
 
     <EditText
-        android:id="@+id/tradeMarkTextView_editProduct"
+        android:id="@+id/marcaTextView_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -54,20 +52,19 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_brand_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/marca_editarProducto" />
 
     <TextView
-        android:id="@+id/label_price_editProduct"
+        android:id="@+id/precio_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/price_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/priceTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/tradeMarkTextView_editProduct" />
+        android:text="@string/precio_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/precioTextView_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/marcaTextView_editarProducto" />
 
     <EditText
-        android:id="@+id/priceTextView_editProduct"
+        android:id="@+id/precioTextView_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,30 +75,28 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_price_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/precio_editarProducto" />
 
     <TextView
-        android:id="@+id/label_type_editProduct"
+        android:id="@+id/tipo_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/type_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/typeSpinner_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/priceTextView_editProduct" />
+        android:text="@string/tipo_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/tipoSpinner_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/precioTextView_editarProducto" />
 
     <TextView
-        android:id="@+id/label_quantity_editProduct"
+        android:id="@+id/cantidad_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/amount_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/amountTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/typeSpinner_editProduct" />
+        android:text="@string/cantidad_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/cantidadTextView_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/tipoSpinner_editarProducto" />
 
     <EditText
-        android:id="@+id/amountTextView_editProduct"
+        android:id="@+id/cantidadTextView_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -112,20 +107,19 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_quantity_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/cantidad_editarProducto" />
 
     <TextView
-        android:id="@+id/label_description_editProduct"
+        android:id="@+id/descripcion_editarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/description_editProduct"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/descriptionTextView_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/amountTextView_editProduct" />
+        android:text="@string/descripcion_editarProducto"
+        app:layout_constraintStart_toStartOf="@+id/descripcionTextView_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadTextView_editarProducto" />
 
     <EditText
-        android:id="@+id/descriptionTextView_editProduct"
+        android:id="@+id/descripcionTextView_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -137,42 +131,42 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_description_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/descripcion_editarProducto" />
 
     <Button
-        android:id="@+id/cancelButton_editProduct"
+        android:id="@+id/cancelarButton_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/cancelButton"
+        android:text="@string/cancelarButton"
         app:backgroundTint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editButton_editProduct"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct"
+        app:layout_constraintStart_toEndOf="@+id/editarButton_editarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionTextView_editarProducto"
         app:rippleColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/editButton_editProduct"
+        android:id="@+id/editarButton_editarProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:onClick="editProduct"
-        android:text="@string/editButton_editProduct"
+        android:onClick="editarProducto"
+        android:text="@string/editarButton_editarProducto"
         app:backgroundTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cancelButton_editProduct"
+        app:layout_constraintEnd_toStartOf="@+id/cancelarButton_editarProducto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/descripcionTextView_editarProducto" />
 
     <Spinner
-        android:id="@+id/typeSpinner_editProduct"
+        android:id="@+id/tipoSpinner_editarProducto"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -182,6 +176,6 @@
         android:background="@android:drawable/btn_dropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_type_editProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/tipo_editarProducto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

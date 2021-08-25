@@ -9,37 +9,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.pcolombia.controller.user.ValidateUserController;
-import com.example.pcolombia.view.seller.EditProductActivity;
-import com.example.pcolombia.view.seller.RegisterProductActivity;
-import com.example.pcolombia.view.user.CreateUserActivity;
-import com.example.pcolombia.view.user.ManageUserActivity;
+import com.example.pcolombia.controller.usuario.ValidarUsuarioController;
+import com.example.pcolombia.view.producto.MisProductosActivity;
+import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
+import com.example.pcolombia.view.usuario.EditarUsuarioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText email;
-    private EditText password;
-    private ValidateUserController controller;
+    private EditText correo;
+    private EditText contraseña;
+    private ValidarUsuarioController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        email = findViewById(R.id.emailTextView_personValidate);
-        password = findViewById(R.id.passwordTextView_personValidate);
-        controller = new ValidateUserController();
-        Intent activity = new Intent(this, CreateUserActivity.class);
-        startActivity(activity);
+        correo = findViewById(R.id.correoTextView_validarUsuario);
+        contraseña = findViewById(R.id.contrasenaTextView_validarUsuario);
+        controller = new ValidarUsuarioController();
     }
 
-    public void validateUser(View view){
-        String emailText = email.getText().toString();
-        String passwordText = password.getText().toString();
-        controller.validateUser(this, emailText, passwordText);
+    public void validarUsuario(View view){
+        String correoText = correo.getText().toString();
+        String contraseñaText = contraseña.getText().toString();
+        controller.validarUsuario(this, correoText, contraseñaText);
     }
 
-    public void fieldMissing(){
+    public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos\n")
                 .setTitle("Algo fue Mal")
@@ -53,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void incorrectEmailOrPassword(){
+    public void correoOContraseñaIncorrectos(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Correo y/o contraseña incorrectos\n\n")
                 .setTitle("Algo fue Mal")
@@ -65,5 +62,17 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    public void irAMisProductos(String correo){
+        Intent intent = new Intent(this, MisProductosActivity.class);
+        intent.putExtra("correo_usuario",correo);
+        startActivity(intent);
+        finish();
+    }
+
+    public void irACrearUsuario(View view){
+        Intent intent = new Intent(this, CrearUsuarioActivity.class);
+        startActivity(intent);
     }
 }
