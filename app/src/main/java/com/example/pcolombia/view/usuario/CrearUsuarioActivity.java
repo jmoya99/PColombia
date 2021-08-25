@@ -69,7 +69,7 @@ public class CrearUsuarioActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    public void duplicatedEmail(){
+    public void correoDuplicado(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Este correo ya está registrado")
                 .setTitle("Algo fue Mal")

@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import com.example.pcolombia.controller.usuario.ValidarUsuarioController;
 import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
+import com.example.pcolombia.view.usuario.EditarUsuarioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         correo = findViewById(R.id.correoTextView_validarUsuario);
         contraseña = findViewById(R.id.contrasenaTextView_validarUsuario);
         controller = new ValidarUsuarioController();
-        Intent activity = new Intent(this, CrearUsuarioActivity.class);
+        Intent activity = new Intent(this, EditarUsuarioActivity.class);
         startActivity(activity);
     }
 

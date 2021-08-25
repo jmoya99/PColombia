@@ -24,11 +24,11 @@ public class ProductoFragment extends Fragment {
     private String estado;
     private String visibilidad;
     private View rootView;
-    private TextView nombreTextView;
-    private TextView marcaTextView;
-    private TextView precioTextView;
-    private TextView estadoTextView;
-    private TextView visibilidadTextView;
+    private TextView nombreEditText;
+    private TextView marcaEditText;
+    private TextView precioEditText;
+    private TextView estadoEditText;
+    private TextView visibilidadEditText;
 
     public ProductoFragment() {
         // Required empty public constructor
@@ -55,16 +55,16 @@ public class ProductoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_producto,container,false);
-        nombreTextView = rootView.findViewById(R.id.nombreTextView_producto);
-        marcaTextView = rootView.findViewById(R.id.marcaTextView_producto);
-        precioTextView = rootView.findViewById(R.id.precioTextView_producto);
-        estadoTextView = rootView.findViewById(R.id.estadoTextView_producto);
-        visibilidadTextView = rootView.findViewById(R.id.visibilidadTextView_producto);
-        nombreTextView.setText(nombre);
-        marcaTextView.setText(marca);
-        precioTextView.setText(precio);
-        estadoTextView.setText(estado);
-        visibilidadTextView.setText(visibilidad);
+        nombreEditText = rootView.findViewById(R.id.nombreTextView_producto);
+        marcaEditText = rootView.findViewById(R.id.marcaTextView_producto);
+        precioEditText = rootView.findViewById(R.id.precioTextView_producto);
+        estadoEditText = rootView.findViewById(R.id.estadoTextView_producto);
+        visibilidadEditText = rootView.findViewById(R.id.visibilidadTextView_producto);
+        nombreEditText.setText(nombre);
+        marcaEditText.setText(marca);
+        precioEditText.setText(precio);
+        estadoEditText.setText(estado);
+        visibilidadEditText.setText(visibilidad);
         return rootView;
     }
 

@@ -12,9 +12,6 @@ import com.example.pcolombia.R;
 
 public class MisProductosActivity extends AppCompatActivity {
 
-    private String[] visibilidadDePrueba = {"Publica","Privada"};
-    private String[] estadoDePrueba = {"Disponible","No Disponible"};
-
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +20,9 @@ public class MisProductosActivity extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(
                 Color.parseColor(getString(R.color.orange))));
         getSupportActionBar().setTitle(getString(R.string.titulo_misProductos));
+    }
+
+    public void agregarProducto(){
+
     }
 }
