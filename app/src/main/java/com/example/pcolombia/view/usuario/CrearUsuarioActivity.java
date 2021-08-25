@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.pcolombia.MainActivity;
 import com.example.pcolombia.R;
 import com.example.pcolombia.controller.usuario.CrearUsuarioController;
 
@@ -83,4 +85,9 @@ public class CrearUsuarioActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    public void irAValidarUsuario(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

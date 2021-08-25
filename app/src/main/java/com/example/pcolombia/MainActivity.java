@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.pcolombia.controller.usuario.ValidarUsuarioController;
+import com.example.pcolombia.view.producto.MisProductosActivity;
 import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
 import com.example.pcolombia.view.usuario.EditarUsuarioActivity;
 
@@ -27,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         correo = findViewById(R.id.correoTextView_validarUsuario);
         contraseña = findViewById(R.id.contrasenaTextView_validarUsuario);
         controller = new ValidarUsuarioController();
-        Intent activity = new Intent(this, EditarUsuarioActivity.class);
-        startActivity(activity);
     }
 
     public void validarUsuario(View view){
@@ -63,5 +62,17 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    public void irAMisProductos(String correo){
+        Intent intent = new Intent(this, MisProductosActivity.class);
+        intent.putExtra("correo_usuario",correo);
+        startActivity(intent);
+        finish();
+    }
+
+    public void irACrearUsuario(View view){
+        Intent intent = new Intent(this, CrearUsuarioActivity.class);
+        startActivity(intent);
     }
 }

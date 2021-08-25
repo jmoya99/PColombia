@@ -20,15 +20,19 @@ public class ValidarUsuarioController {
         }
         this.usuarioRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).usuarioRoomDao();
+        for (Usuario usuario:this.usuarioRoomDao.obtenerUsuarios()) {
+            System.out.println(usuario.getCorreo());
+        }
         Usuario usuario = this.usuarioRoomDao.validarUsuario(correo,contraseña);
         if(usuario == null){
             activity.correoOContraseñaIncorrectos();
             return;
         }
-        if(usuario.getRol() == "Vendedor"){
-            //Pasar a myProducts
+        System.out.println(usuario.getRol());
+        if(usuario.getRol().equals("Vendedor")){
+            activity.irAMisProductos(usuario.getCorreo());
         }else{
-            //Mostrar mensaje de "El rol es Cliente"
+            System.out.println("Cliente");
         }
     }
 }
