@@ -73,6 +73,7 @@ public class GestionarUsuarioActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EditarUsuarioActivity.class);
         intent.putExtra("correo_usuario",getCorreoVendedor());
         startActivity(intent);
+        finish();
     }
 
     public void cargarCampos(String nombre, String correo, String contrasena, String rol){
@@ -86,6 +87,7 @@ public class GestionarUsuarioActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MisProductosActivity.class);
         intent.putExtra("correo_usuario",getCorreoVendedor());
         startActivity(intent);
+        finish();
     }
 
     public void irAValidarUSuario(){

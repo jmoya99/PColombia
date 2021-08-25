@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         controller.validarUsuario(this, correoText, contraseñaText);
     }
 
+    public void cancelar(View view){
+        finish();
+    }
+
     public void campoFaltante(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("por favor llenar todos los campos\n")
@@ -74,5 +78,6 @@ public class MainActivity extends AppCompatActivity {
     public void irACrearUsuario(View view){
         Intent intent = new Intent(this, CrearUsuarioActivity.class);
         startActivity(intent);
+        finish();
     }
 }

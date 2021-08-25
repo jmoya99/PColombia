@@ -111,12 +111,14 @@ public class GestionarProductoActivity extends AppCompatActivity {
         intent.putExtra("correo_usuario",getCorreoVendedor());
         intent.putExtra("id", getID());
         startActivity(intent);
+        finish();
     }
 
     public void irAMisProductos(View view){
         Intent intent = new Intent(this, MisProductosActivity.class);
         intent.putExtra("correo_usuario",getCorreoVendedor());
         startActivity(intent);
+        finish();
     }
 
     public String getCorreoVendedor() {

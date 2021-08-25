@@ -39,12 +39,14 @@ public class MisProductosActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GestionarUsuarioActivity.class);
         intent.putExtra("correo_usuario",getCorreoVendedor());
         startActivity(intent);
+        finish();
     }
 
     public void irARegistrarProducto(View view){
         Intent intent = new Intent(this,RegistrarProductoActivity.class);
         intent.putExtra("correo_usuario",getCorreoVendedor());
         startActivity(intent);
+        finish();
     }
 
     public void irAValidarUsuario(View view){
@@ -58,6 +60,7 @@ public class MisProductosActivity extends AppCompatActivity {
         intent.putExtra("correo_usuario",getCorreoVendedor());
         intent.putExtra("id", id);
         startActivity(intent);
+        finish();
     }
 
     public void agregarProducto(int id, String nombre, String marca, String precio, String estado, String visibilidad){

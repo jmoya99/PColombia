@@ -86,6 +86,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="70dp"
         android:layout_marginRight="70dp"
+        android:onClick="cancelar"
         android:text="@string/cancelarButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"

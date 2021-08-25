@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class EditarUsuarioActivity extends AppCompatActivity {
     private EditText nombreEditText;
     private EditText contrasenaEditText;
     private EditarUsuarioController editarUsuarioController;
+    private String correoVendedor;
 
     @SuppressLint("ResourceType")
     @Override
@@ -32,12 +34,29 @@ public class EditarUsuarioActivity extends AppCompatActivity {
         nombreEditText = findViewById(R.id.nombreTextView_editarUsuario);
         contrasenaEditText = findViewById(R.id.contrasenaTextView_editarUsuario);
 
+        String correo = getIntent().getExtras().getString("correo_usuario");
+        correo = correo != null ? correo : "";
+        setCorreoVendedor(correo);
+
         editarUsuarioController = new EditarUsuarioController();
+        editarUsuarioController.cargarDatos(this, getCorreoVendedor());
     }
 
     public void editarUsuario(View view){
         String nombreText = nombreEditText.getText().toString();
         String contrasenaText = contrasenaEditText.getText().toString();
+        editarUsuarioController.editarUsuario(this,nombreText,contrasenaText,getCorreoVendedor());
+    }
+
+    public void cancelar(View view){
+        irAGestionarUsuario();
+    }
+
+    public void irAGestionarUsuario(){
+        Intent intent = new Intent(this, GestionarUsuarioActivity.class);
+        intent.putExtra("correo_usuario",getCorreoVendedor());
+        startActivity(intent);
+        finish();
     }
 
     public void campoFaltante(){
@@ -59,4 +78,11 @@ public class EditarUsuarioActivity extends AppCompatActivity {
         contrasenaEditText.setText(contrasena);
     }
 
+    public String getCorreoVendedor() {
+        return correoVendedor;
+    }
+
+    public void setCorreoVendedor(String correoVendedor) {
+        this.correoVendedor = correoVendedor;
+    }
 }

@@ -108,6 +108,7 @@ public class EditarProductoActivity extends AppCompatActivity {
         intent.putExtra("correo_usuario",getCorreoVendedor());
         intent.putExtra("id", getID());
         startActivity(intent);
+        finish();
     }
 
     public int getID() {
