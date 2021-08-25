@@ -54,9 +54,8 @@ public class Producto {
     @ColumnInfo(name = "usuario_correo")
     private String usuario_correo;
 
-    public Producto(int id, String nombre, String marca, double precio, String estado, String tipo,
+    public Producto(String nombre, String marca, double precio, String estado, String tipo,
                     String descripcion, int cantidad, String visibilidad, String usuario_correo) {
-        this.id = id;
         this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
