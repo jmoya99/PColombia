@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteY="-71dp">
 
         <Button
-            android:id="@+id/publicarButton_gestionarProducto"
+            android:id="@+id/publicarOcultarButton_gestionarProducto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -21,6 +21,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
+            android:onClick="publicarOcultarProducto"
             android:text="@string/publicarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
@@ -36,12 +37,13 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
+            android:onClick="irAEditarProducto"
             android:text="@string/editarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/publicarButton_gestionarProducto"
+            app:layout_constraintStart_toEndOf="@+id/publicarOcultarButton_gestionarProducto"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
         <Button
@@ -51,11 +53,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
+            android:onClick="eliminarProducto"
             android:text="@string/eliminarProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/orange"
-            app:layout_constraintEnd_toStartOf="@+id/publicarButton_gestionarProducto"
+            app:layout_constraintEnd_toStartOf="@+id/publicarOcultarButton_gestionarProducto"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
@@ -68,13 +71,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:onClick="irAMisProductos"
             android:text="@string/cancelarButton"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
             app:layout_constraintEnd_toStartOf="@+id/comentariosButton_gestionarProducto"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/publicarButton_gestionarProducto" />
+            app:layout_constraintTop_toBottomOf="@+id/publicarOcultarButton_gestionarProducto" />
 
         <Button
             android:id="@+id/comentariosButton_gestionarProducto"
@@ -85,13 +89,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="70dp"
             android:layout_marginRight="70dp"
+            android:enabled="false"
             android:text="@string/comentariosProductoButton_gestionarProducto"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="14sp"
             app:backgroundTint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancelarButton_gestionarProducto"
-            app:layout_constraintTop_toBottomOf="@+id/publicarButton_gestionarProducto" />
+            app:layout_constraintTop_toBottomOf="@+id/publicarOcultarButton_gestionarProducto" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"

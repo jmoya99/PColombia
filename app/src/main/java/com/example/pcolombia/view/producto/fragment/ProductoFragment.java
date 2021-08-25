@@ -1,5 +1,6 @@
 package com.example.pcolombia.view.producto.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.pcolombia.R;
+import com.example.pcolombia.view.producto.GestionarProductoActivity;
+import com.example.pcolombia.view.producto.MisProductosActivity;
+import com.example.pcolombia.view.usuario.GestionarUsuarioActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,11 +22,13 @@ import com.example.pcolombia.R;
  */
 public class ProductoFragment extends Fragment {
 
+    private int id;
     private String nombre;
     private String marca;
     private String precio;
     private String estado;
     private String visibilidad;
+    private MisProductosActivity misProductosActivity;
     private View rootView;
     private TextView nombreEditText;
     private TextView marcaEditText;
@@ -35,14 +41,17 @@ public class ProductoFragment extends Fragment {
     }
 
     // TODO: Rename and change types and number of parameters
-    public static ProductoFragment newInstance(String nombre, String marca, String precio,
-                                               String estado, String visibilidad) {
+    public static ProductoFragment newInstance(int id, String nombre, String marca, String precio,
+                                               String estado, String visibilidad,
+                                               MisProductosActivity misProductosActivity) {
         ProductoFragment fragment = new ProductoFragment();
+        fragment.setID(id);
         fragment.setNombre(nombre);
         fragment.setMarca(marca);
         fragment.setPrecio(precio);
         fragment.setEstado(estado);
         fragment.setVisibilidad(visibilidad);
+        fragment.setMisProductosActivity(misProductosActivity);
         return fragment;
     }
 
@@ -66,6 +75,18 @@ public class ProductoFragment extends Fragment {
         estadoEditText.setText(estado);
         visibilidadEditText.setText(visibilidad);
         return rootView;
+    }
+
+    public void gestionarProducto(View view){
+        getMisProductosActivity().irAGestionarProducto(getID());
+    }
+
+    public int getID() {
+        return id;
+    }
+
+    public void setID(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -106,5 +127,13 @@ public class ProductoFragment extends Fragment {
 
     public void setVisibilidad(String visibilidad) {
         this.visibilidad = visibilidad;
+    }
+
+    public MisProductosActivity getMisProductosActivity() {
+        return misProductosActivity;
+    }
+
+    public void setMisProductosActivity(MisProductosActivity misProductosActivity) {
+        this.misProductosActivity = misProductosActivity;
     }
 }

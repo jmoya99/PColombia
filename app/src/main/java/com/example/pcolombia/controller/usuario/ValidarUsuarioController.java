@@ -20,15 +20,11 @@ public class ValidarUsuarioController {
         }
         this.usuarioRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).usuarioRoomDao();
-        for (Usuario usuario:this.usuarioRoomDao.obtenerUsuarios()) {
-            System.out.println(usuario.getCorreo());
-        }
         Usuario usuario = this.usuarioRoomDao.validarUsuario(correo,contraseña);
         if(usuario == null){
             activity.correoOContraseñaIncorrectos();
             return;
         }
-        System.out.println(usuario.getRol());
         if(usuario.getRol().equals("Vendedor")){
             activity.irAMisProductos(usuario.getCorreo());
         }else{

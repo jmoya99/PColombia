@@ -20,7 +20,7 @@ public interface ProductoRoomDao {
     List<Producto> obtenerProductosPorVendedor(String correo);
 
     @Query("SELECT * FROM producto WHERE id = :id")
-    Producto obtenerProducto(String id);
+    Producto obtenerProducto(int id);
 
     @Insert
     void insertarProducto(Producto producto);
