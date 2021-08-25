@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -56,8 +57,12 @@ public class RegistrarProductoActivity extends AppCompatActivity {
         String tipoText = tipoSpinner.getSelectedItem().toString();
         String cantidadText = cantidadEditText.getText().toString();
         String descripcionText = descripcionEditText.getText().toString();
+        String correoText = getIntent().getExtras().getString("correo-usuario");
         controller.registrarProducto(this, nombreText,marcaText,precioText,
-                tipoText, cantidadText, descripcionText);
+                tipoText, cantidadText, descripcionText, correoText);
+        Intent activity = new Intent(this, GestionarProductoActivity.class);
+        activity.putExtra("correo-usuario",correoText);
+        startActivity(activity);
     }
 
     public void campoFaltante(){

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -59,8 +60,14 @@ public class EditarProductoActivity extends AppCompatActivity {
         String tipoText = tipoSpinner.getSelectedItem().toString();
         String cantidadText = cantidadEditText.getText().toString();
         String descripcionText = descripcionEditText.getText().toString();
-        controller.editarProducto(this, nombreText,marcaText,precioText,
-                                   tipoText, cantidadText, descripcionText);
+        String idText = getIntent().getExtras().getString("id");
+        String correoText = getIntent().getExtras().getString("correo-usuario");
+        controller.editarProducto(this, nombreText,marcaText,precioText, tipoText,
+                                    cantidadText, descripcionText, idText, correoText);
+        Intent activity = new Intent(this, GestionarProductoActivity.class);
+        activity.putExtra("id",idText);
+        activity.putExtra("correo-usuario",correoText);
+        startActivity(activity);
     }
 
     public void campoFaltante(){
