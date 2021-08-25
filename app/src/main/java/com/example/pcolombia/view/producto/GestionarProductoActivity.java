@@ -54,10 +54,8 @@ public class GestionarProductoActivity extends AppCompatActivity {
         correo = correo != null ? correo : "";
         setCorreoVendedor(correo);
 
-        int id = Integer.parseInt(getIntent().getExtras().getString("id") != null ?
-                getIntent().getExtras().getString("id") : "0");
+        int id = getIntent().getExtras().getInt("id");
         setID(id);
-
         controller = new GestionarProductoController();
         controller.cargarProducto(this,getID());
     }
@@ -98,7 +96,7 @@ public class GestionarProductoActivity extends AppCompatActivity {
     }
 
     public void publicarOcultarProducto(View view){
-
+        controller.publicarOcultarProducto(this, getID());
     }
 
     public void irAMisProductos(){

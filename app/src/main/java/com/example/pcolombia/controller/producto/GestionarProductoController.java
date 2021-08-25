@@ -23,12 +23,12 @@ public class GestionarProductoController {
                 activity.getApplicationContext()).productoRoomDao();
         Producto producto = this.productoRoomDao.obtenerProducto(id);
         String pubicarButton = activity.getString(R.string.publicarProductoButton_gestionarProducto);
-        if(producto.getVisibilidad().equals("Privado")){
+        if(producto.getVisibilidad().equals("Publico")){
             pubicarButton = activity.getString(R.string.ocultarProductoButton_gestionarProducto);
         }
         activity.cargarCampos(producto.getNombre(), producto.getMarca(),
                 String.valueOf(producto.getPrecio()), producto.getTipo(), producto.getEstado(),
-                producto.getVisibilidad(), producto.getDescripcion(), producto.getVisibilidad(),
+                producto.getVisibilidad(), producto.getDescripcion(), String.valueOf(producto.getCantidad()),
                 pubicarButton);
     }
 

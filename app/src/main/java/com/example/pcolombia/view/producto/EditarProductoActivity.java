@@ -28,6 +28,8 @@ public class EditarProductoActivity extends AppCompatActivity {
     private EditText cantidadEditText;
     private EditText descripcionEditText;
     private EditarProductoController controller;
+    private int ID;
+    private String correoVendedor;
 
     @SuppressLint("ResourceType")
     @Override
@@ -50,7 +52,15 @@ public class EditarProductoActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipoSpinner.setAdapter(adapter);
 
+        String correo = getIntent().getExtras().getString("correo_usuario");
+        correo = correo != null ? correo : "";
+        setCorreoVendedor(correo);
+
+        int id = getIntent().getExtras().getInt("id");
+        setID(id);
+
         controller = new EditarProductoController();
+        controller.cargarProducto(this,getID());
     }
 
     public void editarProducto(View view){
@@ -60,14 +70,9 @@ public class EditarProductoActivity extends AppCompatActivity {
         String tipoText = tipoSpinner.getSelectedItem().toString();
         String cantidadText = cantidadEditText.getText().toString();
         String descripcionText = descripcionEditText.getText().toString();
-        String idText = getIntent().getExtras().getString("id");
-        String correoText = getIntent().getExtras().getString("correo-usuario");
+        System.out.println("**********************"+tipoText);
         controller.editarProducto(this, nombreText,marcaText,precioText, tipoText,
-                                    cantidadText, descripcionText, idText, correoText);
-        Intent activity = new Intent(this, GestionarProductoActivity.class);
-        activity.putExtra("id",idText);
-        activity.putExtra("correo-usuario",correoText);
-        startActivity(activity);
+                                    cantidadText, descripcionText, getID(), getCorreoVendedor());
     }
 
     public void campoFaltante(){
@@ -89,9 +94,35 @@ public class EditarProductoActivity extends AppCompatActivity {
         nombreEditText.setText(nombre);
         marcaEditText.setText(marca);
         precioEditText.setText(precio);
-        tipoSpinner.setSelection(((ArrayAdapter)tipoSpinner.getAdapter()).getPosition("tipo"));
+        tipoSpinner.setSelection(((ArrayAdapter)tipoSpinner.getAdapter()).getPosition(tipo));
         cantidadEditText.setText(cantidad);
         descripcionEditText.setText(descripcion);
     }
 
+    public void cancelar(View view){
+        irAGestionarProducto();
+    }
+
+    public void irAGestionarProducto(){
+        Intent intent = new Intent(this,GestionarProductoActivity.class);
+        intent.putExtra("correo_usuario",getCorreoVendedor());
+        intent.putExtra("id", getID());
+        startActivity(intent);
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getCorreoVendedor() {
+        return correoVendedor;
+    }
+
+    public void setCorreoVendedor(String correoVendedor) {
+        this.correoVendedor = correoVendedor;
+    }
 }

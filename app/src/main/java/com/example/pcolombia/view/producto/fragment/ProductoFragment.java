@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.pcolombia.R;
@@ -35,6 +36,7 @@ public class ProductoFragment extends Fragment {
     private TextView precioEditText;
     private TextView estadoEditText;
     private TextView visibilidadEditText;
+    private Button gestionarProductoButton;
 
     public ProductoFragment() {
         // Required empty public constructor
@@ -69,16 +71,19 @@ public class ProductoFragment extends Fragment {
         precioEditText = rootView.findViewById(R.id.precioTextView_producto);
         estadoEditText = rootView.findViewById(R.id.estadoTextView_producto);
         visibilidadEditText = rootView.findViewById(R.id.visibilidadTextView_producto);
+        gestionarProductoButton = rootView.findViewById(R.id.gestionarButton_producto);
         nombreEditText.setText(nombre);
         marcaEditText.setText(marca);
         precioEditText.setText(precio);
         estadoEditText.setText(estado);
         visibilidadEditText.setText(visibilidad);
+        gestionarProductoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getMisProductosActivity().irAGestionarProducto(getID());
+            }
+        });
         return rootView;
-    }
-
-    public void gestionarProducto(View view){
-        getMisProductosActivity().irAGestionarProducto(getID());
     }
 
     public int getID() {

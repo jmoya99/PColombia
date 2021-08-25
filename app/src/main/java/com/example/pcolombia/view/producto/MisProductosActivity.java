@@ -31,6 +31,7 @@ public class MisProductosActivity extends AppCompatActivity {
         String correo = getIntent().getExtras().getString("correo_usuario");
         correo = correo != null ? correo : "";
         setCorreoVendedor(correo);
+        misProductosController = new MisProductosController();
         misProductosController.cargarProductos(this);
     }
 

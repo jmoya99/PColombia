@@ -26,6 +26,7 @@ public class RegistrarProductoActivity extends AppCompatActivity {
     private EditText cantidadEditText;
     private EditText descripcionEditText;
     private RegistrarProductoController controller;
+    private String correoVendedor;
 
     @SuppressLint("ResourceType")
     @Override
@@ -42,6 +43,10 @@ public class RegistrarProductoActivity extends AppCompatActivity {
         cantidadEditText = findViewById(R.id.cantidadTextView_registrarProducto);
         descripcionEditText = findViewById(R.id.descripcionTextView_registrarProducto);
 
+        String correo = getIntent().getExtras().getString("correo_usuario");
+        correo = correo != null ? correo : "";
+        setCorreoVendedor(correo);
+
         //Codigo para poner los items en el spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.tipoProductoItems, android.R.layout.simple_spinner_item);
@@ -57,12 +62,8 @@ public class RegistrarProductoActivity extends AppCompatActivity {
         String tipoText = tipoSpinner.getSelectedItem().toString();
         String cantidadText = cantidadEditText.getText().toString();
         String descripcionText = descripcionEditText.getText().toString();
-        String correoText = getIntent().getExtras().getString("correo-usuario");
         controller.registrarProducto(this, nombreText,marcaText,precioText,
-                tipoText, cantidadText, descripcionText, correoText);
-        Intent activity = new Intent(this, GestionarProductoActivity.class);
-        activity.putExtra("correo-usuario",correoText);
-        startActivity(activity);
+                tipoText, cantidadText, descripcionText, getCorreoVendedor());
     }
 
     public void campoFaltante(){
@@ -77,5 +78,24 @@ public class RegistrarProductoActivity extends AppCompatActivity {
                 });
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    public void cancelar(View view){
+        irAMisProductos();
+    }
+
+    public void irAMisProductos(){
+        Intent intent = new Intent(this,MisProductosActivity.class);
+        intent.putExtra("correo_usuario",getCorreoVendedor());
+        startActivity(intent);
+        finish();
+    }
+
+    public String getCorreoVendedor() {
+        return correoVendedor;
+    }
+
+    public void setCorreoVendedor(String correoVendedor) {
+        this.correoVendedor = correoVendedor;
     }
 }

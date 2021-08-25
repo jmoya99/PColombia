@@ -1,5 +1,7 @@
 package com.example.pcolombia.controller.producto;
 
+import android.content.Intent;
+
 import com.example.pcolombia.model.LocalStorage;
 import com.example.pcolombia.model.dao.ProductoRoomDao;
 import com.example.pcolombia.model.pojo.Producto;
@@ -37,8 +39,13 @@ public class RegistrarProductoController {
         }
         this.productoRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).productoRoomDao();
-        Producto producto = new Producto(nombre, marca, Double.parseDouble(precio),"Disponible", tipo,
+        String estado = "Disponible";
+        if(Integer.parseInt(cantidad) == 0){
+            estado = "No disponible";
+        }
+        Producto producto = new Producto(nombre, marca, Double.parseDouble(precio),estado, tipo,
                                         descripcion, Integer.parseInt(cantidad),"Privado",correo);
-        return;
+        this.productoRoomDao.insertarProducto(producto);
+        activity.irAMisProductos();
     }
 }
