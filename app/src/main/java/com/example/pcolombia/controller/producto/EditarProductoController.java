@@ -18,7 +18,7 @@ public class EditarProductoController {
     }
 
     public void editarProducto(EditarProductoActivity activity, String  nombre, String marca, String precio,
-                               String tipo, String cantidad, String descripcion, int id, String correo){
+                               String tipo, String cantidad, String descripcion, int id){
         if(nombre == null || nombre.compareTo("")==0){
             activity.campoFaltante();
             return;
@@ -43,7 +43,6 @@ public class EditarProductoController {
             activity.campoFaltante();
             return;
         }
-        System.out.println("_______________________________________"+precio);
         this.productoRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).productoRoomDao();
         Producto producto = this.productoRoomDao.obtenerProducto(id);

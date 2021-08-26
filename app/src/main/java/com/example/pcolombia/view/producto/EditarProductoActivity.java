@@ -72,7 +72,7 @@ public class EditarProductoActivity extends AppCompatActivity {
         String descripcionText = descripcionEditText.getText().toString();
         System.out.println("**********************"+tipoText);
         controller.editarProducto(this, nombreText,marcaText,precioText, tipoText,
-                                    cantidadText, descripcionText, getID(), getCorreoVendedor());
+                                    cantidadText, descripcionText, getID());
     }
 
     public void campoFaltante(){
