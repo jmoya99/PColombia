@@ -12,11 +12,10 @@ import android.widget.EditText;
 import com.example.pcolombia.controller.usuario.ValidarUsuarioController;
 import com.example.pcolombia.view.producto.MisProductosActivity;
 import com.example.pcolombia.view.usuario.CrearUsuarioActivity;
-import com.example.pcolombia.view.usuario.EditarUsuarioActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText correo;
+    private EditText correoEditText;
     private EditText contraseña;
     private ValidarUsuarioController controller;
 
@@ -25,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        correo = findViewById(R.id.correoTextView_validarUsuario);
+        correoEditText = findViewById(R.id.correoTextView_validarUsuario);
         contraseña = findViewById(R.id.contrasenaTextView_validarUsuario);
         controller = new ValidarUsuarioController();
     }
 
     public void validarUsuario(View view){
-        String correoText = correo.getText().toString();
+        String correoText = correoEditText.getText().toString();
         String contraseñaText = contraseña.getText().toString();
         controller.validarUsuario(this, correoText, contraseñaText);
     }

@@ -90,4 +90,8 @@ public class CrearUsuarioActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void cancelar(View view){
+        irAValidarUsuario();
+    }
 }
