@@ -37,6 +37,10 @@ public class RegistrarProductoController {
             activity.campoFaltante();
             return;
         }
+        if(Integer.parseInt(cantidad) < 0){
+            activity.cantidadNegativa();
+            return;
+        }
         this.productoRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).productoRoomDao();
         String estado = "Disponible";

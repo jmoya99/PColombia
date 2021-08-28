@@ -43,6 +43,10 @@ public class EditarProductoController {
             activity.campoFaltante();
             return;
         }
+        if(Integer.parseInt(cantidad) < 0){
+            activity.cantidadNegativa();
+            return;
+        }
         this.productoRoomDao = LocalStorage.getLocalStorage(
                 activity.getApplicationContext()).productoRoomDao();
         Producto producto = this.productoRoomDao.obtenerProducto(id);
