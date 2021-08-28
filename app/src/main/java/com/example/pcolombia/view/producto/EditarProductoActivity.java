@@ -89,6 +89,20 @@ public class EditarProductoActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    public void cantidadNegativa(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("La cantidad no puede ser negativa\n")
+                .setTitle("Algo fue Mal")
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     public void cargarCampos(String  nombre, String marca, String precio,String tipo,
                              String cantidad, String descripcion){
         nombreEditText.setText(nombre);
